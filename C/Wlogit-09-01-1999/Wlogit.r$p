@@ -1,0 +1,18 @@
+/Twe/x/l/c/C /V3.10 /LC:\BC5\LIB;C:\BVSP\LIB +
+C:\BC5\LIB\c0wl.obj+
+elisa.obj+
+polynoom.obj+
+winpicli.obj+
+wlogit.obj+
+wcgraph.obj+
+wlogcalc.obj+
+poppadp.obj+
+fileio.obj+
+wlorek.obj
+wlogit.exe
+
+C:\BC5\LIB\import.lib+
+C:\BC5\LIB\mathwl.lib+
+C:\BC5\LIB\cwl.lib
+wlogit.def
+wlogit.res

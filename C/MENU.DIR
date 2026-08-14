@@ -1,0 +1,24 @@
+Park C: && D:|c:\bin|park|STOP
+Aquire|c:\bbc80|AQUIRE| 
+Bridge|d:\BRIDGE|BRIDGE.com
+C Turbo|C:\C\bin|TC.EXE|/re|STOP
+Corr TC|c:\|corr.bat|stop
+PC plus|c:\|pcplus.bat
+HG|c:\hg|hg
+Lotus 2.2 123|c:\lotus|123|stop
+Lotus|c:\LOTUS|LOTUS.com|123
+MSDOS|C:\DOS|stop
+Norton Int.|c:\nor|ni|stop
+Vopt|c:\vopt|voptdemo
+PE|C:\BIN|PE
+Backup/Restore|d:\pct6|pcbackup|stop
+Quick BASIC|C:\QB45|qb.bat
+Shell PC|d:\pct6|pcshell.exe
+Sketch|c:\|sketch.bat
+Star|C:\|starvga
+Turbo Debugger|c:\td|td386|stop
+Utils|C:\UTILS|stop
+WP51|c:\wp51|wp|/d-e:
+Windows|c:\windows|win|stop
+.DIR A:|C:\|@.bat
+Peptide|c:\|peptide.bat|stop

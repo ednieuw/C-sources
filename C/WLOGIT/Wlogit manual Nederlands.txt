@@ -1,0 +1,269 @@
+Curve fitting
+ for Windows
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ed Nieuwenhuys, Maart 1995
+
+Inleiding
+
+Curve fitting for Windows is bedoeld om een vloeiende lijn door kalibratie punten te 
+berekenen.
+Na de berekening kunnen op de berekende kalibratiecurve de onbekende 
+concentraties worden uitgerekend.
+Het programma is ook aangepast om Lotus worksheets in te lezen en om met 
+behulp van een template file ASCII bestanden van diverse EIA plaat readers in te 
+lezen.
+Er zijn vier regressie algoritmen ingebouwd.
+De logit regressie die ook wel bekend staat onder Rodbard of Probit regressie, een 
+lineaire regressie, een lineaire y-kwadraat regressie en een polynoom regressie.
+De logit regressie wordt in het algemeen toegepast bij kalibratie curven die de vorm 
+van een sigmoïdaal hebben. Voorbeelden hiervan zijn immunologische bepalingen 
+zoals ELISA's, RIA's en nefelometrische bepalingen.
+De lineaire regressie wordt gebruikt onder andere gebruikt bij extinctiebepalingen 
+zoals een Lowry eiwitbepaling.  
+De y-kwadraat regressie is gemaakt om resultaten van een Radiale Immuno Diffusie 
+plaat uit te rekenen.
+De polynoom regressie is wordt gebruikt als bovenstaande regressies niet passen.
+
+Installatie.
+Het programma bestaat uit drie onderdelen: WLOGIT.EXE, BWCC.DLL en 
+RTL450.DLL.
+Na het kopiëren van deze onderdelen in een directory kan het programma in een 
+window geïnstalleerd worden Met File, New, Programitem, Browse (zoek wlogit.exe 
+op) en OK.
+Er is nu een icon zichtbaar waarin een gebogen kalibratielijntje zichtbaar is met de 
+naam wlogit.
+
+
+Menu
+
+ 
+Na het opstarten van het programma is het onderstaande scherm zichtbaar.
+
+
+Het programma werkt in principe ook zonder muis. Door het drukken van de 
+onderstreepte letter in het knopje wordt dat onderdeel van het programma 
+geactiveerd.
+Bij de axis opties moet de spatie gedrukt worden om de checkbox aan of uit te 
+zetten.
+
+Het menu is onderverdeeld in de volgende groepen.
+
+Algemeen
+Quit, verlaten van het programma. Dit wordt ook bereikt door de toetscombinatie 
+ALT+F4.
+About, informatie over het programma.
+
+
+Data input
+
+Het programma gaat ervan uit dat de getallen tussen de 0.001 en de 1000000 
+liggen. Waarden worden afgerond op drie cijfers achter de komma. De grafieken en 
+de uitslagen kunnen tot 1000000 geprint worden zonder dat de kolommen of de 
+grafieken verstoord raken.
+Probeer de ingevoerde concentraties en meetresultaten tussen de 1 en de 1000 te 
+houden
+
+Load, Laden van een Lotus WKS of WK1 bestand.
+
+In een lotus bestand is de volgende layout van data vereist:
+A kolom:	De concentratie van het kalibratiepunt of de naam van het monster. Bij 
+de logit regressie is een blanco (nul) verplicht. Als deze niet wordt ingevoerd 
+dan wordt een uitslag van nul ingevoerd in het programma.
+B kolom:	De meetresultaten. Bijvoorbeeld extincties, % bindingen enz.
+C kolom	De gebruikte verdunning. Als niets wordt ingevoerd wordt als 
+verdunning 1 (een) aangenomen. De berekende resultaten worden met de 
+verdunning vermenigvuldigd.
+In de eerste rij, regel 1, kan een titel worden meegegeven die bij de X-as en Y-as in 
+de grafiek wordt geprint. Sommige fonts in de computer kunnen niet dwars printen 
+wat resulteert in een Y-as titel die door de grafiek heen loopt. Het plaatje kan dan 
+als PIC files gesaved worden en met behulp van een tekstverwerker bij de uitslagen 
+geprint worden. Zie PIC output.
+
+Fur ELISA, rekent ELISA platen met behulp van een template uit.
+
+Met behulp van het instel.exe programma, een ASCII editor of in een lotus WKS of 
+WK1 file(toekomstige optie) kunnen template files gemaakt worden. Een template 
+file bevat het inzetschema van een ELISA plaatje.
+Als de template file in een editor gemaakt wordt dient deze de volgende layout te 
+hebben:
+Concentraties van de kalibratielijn als getallen gescheiden door een of 
+meerdere spaties en monsternamen die beginnen met een letter en daarna 
+een volgnummer gevolgd door  een komma met daarachter een verdunning 
+gescheiden door een of meerder spaties. Er is geen beperking aan de lay-out.
+Monsternamen worden bij elkaar gesorteerd in de uitslaglijst. Houdt daarom 
+rekening met de nummering. Als de monsters m1, m2, m3, m11  worden 
+genummerd dan ontstaat er na sorteren de volgorde: m1, m11, 2, m3. 
+Nummer ze daarom als m01, m02, m03, m11.
+Voorbeeld van een templatefile:
+m01,0100 m02,0100 m03,0100 m04,0100 m05,0100 m06,0100 m07,0100 m08,0100 m09,0100 m10,0100 m11,0100 m12,0100
+m01,0500 m02,0500 m03,0500 m04,0500 m05,0500 m06,0500 m07,0500 m08,0500 m09,0500 m10,0500 m11,0500 m12,0500
+m01,2500 m02,2500 m03,2500 m04,2500 m05,2500 m06,2500 m07,2500 m08,2500 m09,2500 m10,2500 m11,2500 m12,2500
+m13,0100 m14,0100 m15,0100 m16,0100 m17,0100 m18,0100 m19,0100 m20,0100 m21,0100 m22,0100 m23,0100 m24,0100
+m13,0500 m14,0500 m15,0500 m16,0500 m17,0500 m18,0500 m19,0500 m20,0500 m21,0500 m22,0500 m23,0500 m24,0500
+m13,2500 m14,2500 m15,2500 m16,2500 m17,2500 m18,2500 m19,2500 m20,2500 m21,2500 m22,2500 m23,2500 m24,2500 
+    0        0         0        0        0         0      0        0         0       0          0     0  
+  125      62.5      31.2      15.6    7.81    3.90     1.95     0.97     0.48     0.24     0.12    0.06 
+
+ 
+
+Manual input, invoer met de hand
+Deze keuze geeft het volgende scherm.
+Met de TAB toets kan door de invoermogelijkheden gewandeld worden. Als Escape 
+of Cancel wordt gedrukt dan kunnen concentraties en meetwaarden worden 
+ingevoerd. 
+Door het invoeren van de juiste waarden in "Highest concentration", "Dilutionfactor" 
+en "No of replica's" worden de concentraties door het programma ingevoerd. In dit 
+geval 1000, 500, 250, enz.
+Als Return of OK wordt gedrukt dan verschijnt een leeg scherm met een invoer 
+dialoogbox waarin staat "Blank".
+Voer de meetwaarde van de blanco in. Daarna kunnen in de invoer dialoogbox de 
+meetwaarden, en als niet voor constante verdunning gekozen is, de concentraties 
+worden ingevoerd.
+Als alles ingevoerd is kan Escape worden gedrukt. De ingevoerde getallen kunnen 
+dan nog gecorrigeerd worden door de cursor op de bewuste regel te plaatsen en 
+Return te drukken. De invoer dialoogbox verschijnt dan weer. Als niets wordt 
+ingevoerd blijft de oude waarde staan.
+Door in edit mode nogmaals Escape te drukken vraagt het programma "quit 
+calibration input?". Het drukken van de Escape toets, Cancel of Yes laat het 
+programma weer terugkeren naar het hoofdmenu.
+Als Manual input weer gekozen wordt kunnen ingevoerde getallen alsnog 
+gecorrigeerd worden.
+ 
+
+ 
+Results
+
+
+Calculate, berekend een regressie lijn door de kalibratiepunten.
+
+Nadat de gegevens ingevoerd zijn moet de kalibratielijn berekend worden voordat 
+de concentratie uit de meetresultaten berekend kunnen worden.
+Na het drukken van de Calculate button verschijnt het scherm zoals hiernaast.
+Door het drukken van de letter bij een punt wordt dit punt uit de 
+regressieberekening verwijderd en een nieuwe curve berekent. Het verwijderde punt 
+wordt weergegeven met een X. Door opnieuw de letter te drukken wordt het punt 
+weer geactiveerd. Punten kunnen ook verwijderd worden door de muispointer op 
+een punt te zetten en de rechter muisknop te drukken. Opnieuw activeren van een 
+punt kan alleen door het drukken van de desbetreffende letter.
+ 
+Als op Escape gedrukt wordt gaat het programma terug naar het hoofdmenu. Met 
+een willekeurige andere toets verschijnt een invoerbox waarin de experimentnaam 
+ingevoerd kan worden. De naam kan niet langer zijn dan het invoerscherm.
+ 
+
+Als de kalibratiecurve met de hand is ingevoerd of als de kalibratielijn gegevens 
+gecorrigeerd zijn, verschijnt de volgende dialoogbox.
+Als alle in te voeren meetgegevens een vaste verdunning hebben druk dan Yes, No 
+als dat niet het geval is. Druk Cancel om de invoer te staken en terug te gaan naar 
+het hoofdmenu.
+Als tijdens de invoer van meetresultaten er een verandering in de verdunning 
+plaatsvindt druk dan escape. Deze dialoogbox verschijnt dan weer.
+ 
+
+Na beantwoording van dit scherm worden de meetresultaten van de ingelezen file 
+berekend of de volgende invoerbox verschijnt. Hierin wordt de verdunning of het 
+meetresultaat gevraagd. Als de gegevens ingevoerd worden verschijnen de 
+resultaten op het scherm. Op elk moment kan op Escape gedrukt worden. Er 
+verschijnt dan een cursorblokje dat met behulp van de cursortoetsen naar een regel 
+gebracht kan worden. Als daar Return gedrukt wordt kunnen de resultaten van die 
+lijn veranderd worden. Nogmaals drukken van Escape brengt de Dialoogbox 
+"Constant dilution?" weer terug.
+Verlaat de invoer door Cancel of de Escape toets te drukken.
+Print, print de uitgerekende data en de kalibratiecurve uit op de aangesloten 
+printer. 
+
+Er verschijnt een standaard WINDOWS dialoogbox om te printen.
+
+Editor, Start een editor met alle berekende gegevens op.
+
+
+In het veld "Editor Name" kan een naam van een geliefde editor ingevoerd worden. 
+Het programma bewaart deze naam voor volgende sessies. Zorg ervoor dat de 
+editor in de PATH staat.
+Als de knop Editor gedrukt wordt verschijnen de resultaten in de geselecteerde 
+editor in een formaat wat in lotus met "/ file import numbers" ingelezen kan worden. 
+Het bestand moet dan wel onder een andere naam gesaved worden met de extensie 
+.PRN.
+
+Join Results, scheidt uitslagen met verschillende naam in de resultatenuitvoer.
+
+Als deze optie wordt aangezet dan worden de uitslagen met dezelfde naam 
+gescheiden door een lege regel in de uitvoer. Dit kan gewenst zijn als ELISA platen 
+worden uitgerekend. Deze optie moet aangezet worden voor het drukken van 
+"Calculate".
+
+PIC output
+
+Als een filenaam wordt ingevoerd in de invoerbox dan wordt het regressieplaatje 
+onder die naam als een lotus PIC file gesaved.
+
+Type of regression
+
+Zie inleiding.
+Logit wordt berekend volgens de formule: log(Y-blanco)/Ymax-Y)=slope*log 
+X+intercept, waarin Ymax zo wordt gevarieerd dat de correlatie van de kalibratielijn, 
+na lineaire regressie van de getransformeerde X en Y waarden, maximaal is.
+Lineaire regressie wordt volgens lineaire regressie berekend.
+y^2 vs x wordt na kwadrateren van Y volgens lineaire regressie uitgerekend. De 
+ingevoerde meetresultaten worden bij de invoer gekwadrateerd en met behulp van 
+de berekende parameters wordt de concentratie uitgerekend.
+De polynoom kan een graad van 1(lineair) tot en met 9 aan. Standaard staat deze 
+op drie.
+
+Axis options
+
+X zeroforced, Y zeroforced, forceert nulpunten in de grafiek.
+Als de assen niet logaritmisch zijn gekozen dat wordt de desbetreffende as vanaf het 
+nulpunt getekend ongeacht de grootte van de meetpunten.
+
+X axis Log, Y axis Log, tekent de assen logaritmisch.
+De optie wordt automatisch uitgeschakeld al er nul in de X of Y data voorkomen.
+Bij de logit regressie wordt de blanco wel getekend om een indruk van de blanco ten 
+opzichte van de kalibratiepunten te krijgen. 
+Bij de overige regressies moet, als men wel logaritmisch weergegeven wil, de 
+nulwaarde vervangen worden door een getal dicht bij nul.
+
+Ticksin, Ticksout, streepje buiten of binnen de assen.
+
+Max X-axis, Max Y-axis
+Waarden groter dan de ingevoerde getallen worden niet in de berekening van de 
+kalibratiepunten gebruikt.
+
+3
+
+

@@ -1,0 +1,309 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""res\\rlf.rc2""  // non-App Studio edited resources\r\n"
+    "\r\n"
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "#include ""afxprint.rc""  // printing/print preview resources\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MAINFRAME           ICON    DISCARDABLE     "RES\\RLF.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "RES\\TOOLBAR.BMP"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About RLF...",               ID_APP_ABOUT
+    END
+    POPUP "V&uurvlieg"
+    BEGIN
+        MENUITEM "&Vliegen",                    ID_VUURVLIEG_VLIEGEN
+        MENUITEM "&Rusten",                     ID_VUURVLIEG_RUSTEN, GRAYED
+        MENUITEM "&Wipje",                      ID_VUURVLIEG_WIPJE
+        MENUITEM SEPARATOR
+        MENUITEM "&Dialog",                     ID_VUURVLIEG_WAARDEN
+    END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY,CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY,CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY,CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY,NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY,CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL, NOINVERT
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 217, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About RLF"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "RLF Application Version 1.0",IDC_STATIC,40,10,119,8
+    LTEXT           "Copyright \251 1994",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
+END
+
+IDD_VUURVLIEG_WAARDEN DIALOG DISCARDABLE  75, 50, 292, 204
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Flash waarden"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Yas blokken:",IDC_STATIC,37,21,57,9
+    EDITTEXT        IDC_YAS_BLOK,101,19,18,13,ES_AUTOHSCROLL
+    LTEXT           "&Xas blokken:",IDC_STATIC,36,36,57,9,NOT WS_GROUP
+    EDITTEXT        IDC_XAS_BLOK,101,34,18,13,ES_AUTOHSCROLL
+    LTEXT           "&Start flashes:",IDC_STATIC,172,19,57,9,NOT WS_GROUP
+    EDITTEXT        IDC_START_FLASH,236,17,18,13,ES_AUTOHSCROLL
+    LTEXT           "&Max waarde rest:",IDC_STATIC,172,34,57,9,NOT WS_GROUP
+    EDITTEXT        IDC_MAX_WAARDE,236,32,18,13,ES_AUTOHSCROLL
+    LTEXT           "&Invloed blokken:",IDC_STATIC,37,60,57,9,NOT WS_GROUP
+    EDITTEXT        IDC_INVLOED,101,57,18,13,ES_AUTOHSCROLL
+    LTEXT           "M&oeheidsfaktor:",IDC_STATIC,36,75,57,9,NOT WS_GROUP
+    EDITTEXT        IDC_MOEHEID,101,72,18,13,ES_AUTOHSCROLL
+    LTEXT           "&Energiefaktor:",IDC_STATIC,172,59,57,9,NOT WS_GROUP
+    EDITTEXT        IDC_ENERGIE,236,57,18,13,ES_AUTOHSCROLL
+    LTEXT           "&Per. autoerbij:",IDC_STATIC,172,75,57,9,NOT WS_GROUP
+    EDITTEXT        IDC_PER_ERBIJ,236,72,18,13,ES_AUTOHSCROLL
+    GROUPBOX        "Hoe laden door flash",IDC_STATIC,29,97,99,61
+    CONTROL         "Flashende niet laden",IDC_HOEFLASH_0,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,40,115,75,10
+    CONTROL         "Iedereen laden",IDC_HOEFLASH_1,"Button",
+                    BS_AUTORADIOBUTTON,40,127,75,10
+    CONTROL         "Laden naar kleur",IDC_HOEFLASH_2,"Button",
+                    BS_AUTORADIOBUTTON,40,139,75,10
+    GROUPBOX        "Hoe autoerbij",IDC_STATIC,163,97,99,61
+    CONTROL         "Niets erbij",IDC_HOEERBIJ_0,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,175,115,75,10
+    CONTROL         "% van treshold",IDC_HOEERBIJ_1,"Button",
+                    BS_AUTORADIOBUTTON,175,127,75,10
+    CONTROL         "% van vershil",IDC_HOEERBIJ_2,"Button",
+                    BS_AUTORADIOBUTTON,175,139,75,10
+    DEFPUSHBUTTON   "Restart",IDOK,15,175,50,14,WS_GROUP
+    PUSHBUTTON      "Doorgaan",IDDOORGAAN,84,175,50,14
+    PUSHBUTTON      "Reset",IDRESET,153,175,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,222,175,50,14
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,15,18,20
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "RLF Windows Application\nRlf\nRLF Document\nRLF Files (*.rlf)\n.rlf"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "RLF Windows Application"
+    AFX_IDS_IDLEMESSAGE     "Doe eindelijk wat!!!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_I          "0000"
+    ID_INDICATOR_F          "00000"
+    ID_INDICATOR_GW         "000000"
+    ID_INDICATOR_MAX        "0000000"
+    ID_INDICATOR_MIN        "0000000"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document"
+    ID_FILE_OPEN            "Open an existing document"
+    ID_FILE_CLOSE           "Close the active document"
+    ID_FILE_SAVE            "Save the active document"
+    ID_FILE_SAVE_AS         "Save the active document with a new name"
+    ID_FILE_PAGE_SETUP      "Change the printing options"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options"
+    ID_FILE_PRINT           "Print the active document"
+    ID_FILE_PRINT_PREVIEW   "Display full pages"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright"
+    ID_APP_EXIT             "Quit the application; prompts to save documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane"
+    ID_PREV_PANE            "Switch back to the previous window pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection"
+    ID_EDIT_CLEAR_ALL       "Erase everything"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard"
+    ID_EDIT_FIND            "Find the specified text"
+    ID_EDIT_PASTE           "Insert Clipboard contents"
+    ID_EDIT_REPEAT          "Repeat the last action"
+    ID_EDIT_REPLACE         "Replace specific text with different text"
+    ID_EDIT_SELECT_ALL      "Select the entire document"
+    ID_EDIT_UNDO            "Undo the last action"
+    ID_EDIT_REDO            "Redo the previously undone action"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VUURVLIEG_VLIEGEN    "De vliegjes gaan vliegen tot ze weer mogen rusten"
+    ID_VUURVLIEG_RUSTEN     "De vliegjes gaan rusten tot ze weer mogen gaan vliegen of wippen"
+    ID_VUURVLIEG_WIPJE      "De vliegjes vliegen een stukje en rusten meteen weer"
+    ID_VUURVLIEG_WAARDEN    "Instellen flash waarden"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\rlf.rc2"  // non-App Studio edited resources
+
+#include "afxres.rc"  // Standard components
+#include "afxprint.rc"  // printing/print preview resources
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

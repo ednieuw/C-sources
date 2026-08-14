@@ -1,0 +1,9 @@
+NAME               stest
+DESCRIPTION        'Spin button test'
+EXETYPE            WINDOWS
+STUB               'WINSTUB.EXE'
+CODE               DISCARDABLE PRELOAD
+DATA               PRELOAD
+HEAPSIZE           4096
+STACKSIZE          8192
+EXPORTS

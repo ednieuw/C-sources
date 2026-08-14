@@ -1,0 +1,20 @@
+;-------------------------------------
+; WLOGIT.DEF module definition file
+;-------------------------------------
+NAME           WLOGIT
+DESCRIPTION    'WLOGIT Version 2.1'
+;STUB           'WINSTUB.EXE'
+EXETYPE        WINDOWS
+
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE MULTIPLE
+
+HEAPSIZE       4096
+STACKSIZE      5120
+EXPORTS        WNDPROC
+					KNOPPENPROC
+					ABOUTDLGPROC
+					GRAPHDRAWDLGPROC
+					CALCRESULTDLGPROC
+					DILKNOPPENPROC
+					CALCINPUTDLGPROC

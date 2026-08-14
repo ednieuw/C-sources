@@ -1,0 +1,47 @@
+INC=-Ic:\pay\borlandc.31\include
+CC = bcc -ml -v -WS -w
+TASM = TASM
+TLIB = tlib
+TLINK = tlink
+
+.cpp.obj:
+  $(CC) -c {$< }
+
+all: spin.dll stest.exe
+
+stest.exe: stest.res stest.obj stest.def
+	$(TLINK) /v/x/c/P-/C/Twe @&&|
+c0wl.obj+
+stest.obj
+stest
+		# no map file
+mathwl.lib+
+import.lib+
+crtldll.lib
+stest.def
+|
+  	BRC  stest.res stest.exe
+
+stest.obj: stest.h stest.cpp spin.h
+
+stest.res: stest.h stest.rc 
+	BRC $(INC) -R -FO stest.res stest.RC
+
+spin.dll: spin.h spin.obj spin.res
+  $(TLINK) /v/s/c/P-/Twd @&&|
+c0dl.obj+
+spin.obj
+spin.dll
+spin
+import.lib+
+cwl.lib
+spin.def
+|
+      BRC  spin.res spin.dll
+
+#		*Individual File Dependencies*
+spin.obj: spin.h spin.cpp 
+
+spin.res: spin.h spin.rc 
+	BRC $(INC) -R -FO spin.res SPIN.RC
+

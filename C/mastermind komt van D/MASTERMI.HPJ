@@ -1,0 +1,13 @@
+[OPTIONS]
+TITLE=mastermi.exe
+COMPRESS=true
+WARNING=2
+
+[FILES]
+helpmain.rtf      ; main topics
+
+[BITMAPS]
+helpicon.bmp
+
+[MAP]
+#include <mstrmapp.rh>

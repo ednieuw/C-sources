@@ -1,0 +1,18 @@
+;-------------------------------------
+; WCORR.DEF module definition file
+;-------------------------------------
+NAME           WCORR
+DESCRIPTION    'WCORR Version 1.1'
+;STUB           'WINSTUB.EXE'
+EXETYPE        WINDOWS
+
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE MULTIPLE
+
+HEAPSIZE       8192
+STACKSIZE      8192
+EXPORTS        WNDPROC
+					KNOPPENPROC
+					ABOUTDLGPROC
+					GRAPHDRAWDLGPROC
+					SELECTLISTDLGPROC

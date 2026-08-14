@@ -1,0 +1,233 @@
+//#if !defined(__mstrmapp_rh)                // Sentry use file only if it's not already included.
+//#define __mstrmapp_rh
+
+/*  Project mastermi
+    EDRON
+    Copyright © 1995. All Rights Reserved.
+
+    SUBSYSTEM:    mastermi.exe Application
+    FILE:         mstrmapp.h
+    AUTHOR:       Ed N & Ron L
+
+
+    OVERVIEW
+    ========
+    Constant definitions for all resources defined in mstrmapp.rc.      
+*/
+
+
+//
+// IDHELP BorButton for BWCC dialogs.
+//
+//#define IDHELP                  998             // Id of help button
+
+
+//
+// Application specific definitions:
+//
+//#define ICON_1	1
+//#define BITMAP_1	1
+#define BITMAP_1	1
+#define IDI_SDIAPPLICATION      1001            // Application icon
+#define IDC_KNOPOK		1
+#define IDC_KNOPCLEAR	2
+#define IDC_SOLUTION	116
+#define IDC_POS4	121
+#define IDC_POS5	122
+#define IDC_POS3	120
+#define IDC_POS2	119
+#define IDC_POS1	118
+#define IDC_BMP0	510
+#define IDC_BMP1	511
+#define IDC_BMP2	512
+#define IDC_BMP3	513
+#define IDC_BMP4	514
+#define IDC_BMP5	515
+#define IDC_BMP6	516
+#define IDC_BMP7	517
+#define IDC_BMP8	518
+#define IDC_BMP9	519
+
+#define PLATFORM	25535
+#define KNOPBLUE_BMP 1501
+#define KNOP_BMP0	1510
+#define KNOP_BMP1	1511
+#define KNOP_BMP2	1512
+#define KNOP_BMP3	1513
+#define KNOP_BMP4	1514
+#define KNOP_BMP5	1515
+#define KNOP_BMP6	1516
+#define KNOP_BMP7	1517
+#define KNOP_BMP8	1518
+#define KNOP_BMP9	1519
+#define KNOP_BMP10	3510
+#define KNOP_BMP11	3511
+#define KNOP_BMP12	3512
+#define KNOP_BMP13	3513
+#define KNOP_BMP14	3514
+#define KNOP_BMP15	3515
+#define KNOP_BMP16	3516
+#define KNOP_BMP17	3517
+#define KNOP_BMP18	3518
+#define KNOP_BMP19	3519
+
+#define SDI_MENU                100             // Menu resource ID and Accelerator IDs
+
+//
+// CM_FILEnnnn commands (include\owl\editfile.rh except for CM_FILEPRINTPREVIEW)
+//
+#define CM_FILENEW              24331           // SDI New
+#define CM_FILEOPEN             24332           // SDI Open
+#define CM_FILECLOSE            24339
+#define CM_FILESAVE             24333
+#define CM_FILESAVEAS           24334
+
+
+//
+// Window commands (include\owl\window.rh)
+//
+#define CM_EXIT                 24310
+
+
+//
+// CM_EDITnnnn commands (include\owl\window.rh)
+//
+#define CM_EDITUNDO             24321
+#define CM_EDITCUT              24322
+#define CM_EDITCOPY             24323
+#define CM_EDITPASTE            24324
+#define CM_EDITDELETE           24325
+#define CM_EDITCLEAR            24326
+#define CM_EDITADD              24327
+#define CM_EDITEDIT             24328
+
+
+//
+// Search menu commands (include\owl\editsear.rh)
+//
+#define CM_EDITFIND             24351
+#define CM_EDITREPLACE          24352
+#define CM_EDITFINDNEXT         24353
+
+
+//
+// Help menu commands.
+//
+#define CM_HELPCONTENTS         2001
+#define CM_HELPUSING            2002
+#define CM_HELPABOUT            2009
+
+
+// Context sensitive help cursor.
+#define IDC_HELPCURSOR          24000
+
+
+//
+// About Dialogs
+//
+#define IDD_ABOUT               22000
+#define IDC_VERSION             22001
+#define IDC_COPYRIGHT           22002
+#define IDC_DEBUG               22003
+
+
+//
+// Client Dialog
+//
+#define IDD_CLIENT               2000
+//#define IDC_KNOP9	111
+#define IDC_NEWGAME	115
+//#define IDC_KNOP8	110
+//#define IDC_KNOP7	109
+//#define IDC_KNOP6	108
+
+
+//
+// OWL defined strings
+//
+
+// Statusbar
+#define IDS_MODES               32530
+#define IDS_MODESOFF            32531
+
+
+// EditFile
+#define IDS_UNTITLED            32550
+#define IDS_UNABLEREAD          32551
+#define IDS_UNABLEWRITE         32552
+#define IDS_FILECHANGED         32553
+#define IDS_FILEFILTER          32554
+                                
+// EditSearch
+#define IDS_CANNOTFIND          32540
+
+
+//
+// General & application exception messages (include\owl\except.rh)
+//
+#define IDS_UNKNOWNEXCEPTION    32767
+#define IDS_OWLEXCEPTION        32766
+#define IDS_OKTORESUME          32765
+#define IDS_UNHANDLEDXMSG       32764
+#define IDS_UNKNOWNERROR        32763
+#define IDS_NOAPP               32762
+#define IDS_OUTOFMEMORY         32761
+#define IDS_INVALIDMODULE       32760
+#define IDS_INVALIDMAINWINDOW   32759
+#define IDS_VBXLIBRARYFAIL      32758
+
+//
+// Owl 1 compatibility messages
+//
+#define IDS_INVALIDWINDOW       32756
+#define IDS_INVALIDCHILDWINDOW  32755
+#define IDS_INVALIDCLIENTWINDOW 32754
+
+//
+// TXWindow messages
+//
+#define IDS_CLASSREGISTERFAIL   32749
+#define IDS_CHILDREGISTERFAIL   32748
+#define IDS_WINDOWCREATEFAIL    32747
+#define IDS_WINDOWEXECUTEFAIL   32746
+#define IDS_CHILDCREATEFAIL     32745
+
+#define IDS_MENUFAILURE         32744
+#define IDS_VALIDATORSYNTAX     32743
+#define IDS_PRINTERERROR        32742
+
+#define IDS_LAYOUTINCOMPLETE    32741
+#define IDS_LAYOUTBADRELWIN     32740
+
+//
+// TXGdi messages
+//
+#define IDS_GDIFAILURE          32739
+#define IDS_GDIALLOCFAIL        32738
+#define IDS_GDICREATEFAIL       32737
+#define IDS_GDIRESLOADFAIL      32736
+#define IDS_GDIFILEREADFAIL     32735
+#define IDS_GDIDELETEFAIL       32734
+#define IDS_GDIDESTROYFAIL      32733
+#define IDS_INVALIDDIBHANDLE    32732
+
+
+// TInputDialog DIALOG resource (include\owl\inputdia.rh)
+#define IDD_INPUTDIALOG         32514
+#define ID_PROMPT               4091
+#define ID_INPUT                4090
+
+
+// TSlider bitmaps (horizontal and vertical) (include\owl\slider.rh)
+#define IDB_HSLIDERTHUMB        32000
+#define IDB_VSLIDERTHUMB        32001
+
+
+// Validation messages (include\owl\validate.rh)
+#define IDS_VALPXPCONFORM       32520
+#define IDS_VALINVALIDCHAR      32521
+#define IDS_VALNOTINRANGE       32522
+#define IDS_VALNOTINLIST        32523
+
+
+//#endif         // __mstrmapp_rh sentry.

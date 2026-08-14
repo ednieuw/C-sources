@@ -1,0 +1,19 @@
+;------------------------------------------------
+;   Project mastermi
+;   EDRON
+;   januari 1996. May be freely distributed.
+;
+;   SUBSYSTEM:    mastermi.exe Module Defintion File
+;   FILE:         mstrmapp.def
+;   AUTHOR:       Ed Nieuwenhuys
+;
+;------------------------------------------------
+
+NAME mastermi
+
+DESCRIPTION 'mastermi Application - januari 1996. May be freely distributed.'
+EXETYPE     WINDOWS
+CODE        PRELOAD MOVEABLE DISCARDABLE
+DATA        PRELOAD MOVEABLE
+HEAPSIZE    4096
+STACKSIZE   8192

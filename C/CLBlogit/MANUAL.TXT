@@ -1,0 +1,148 @@
+Curve fitting for Windows
+
+
+Introduction
+
+
+Curve fitting for Windows was made to calculated a curve through the measured points of a calibration line. After calculation of this line it is possible to calculated a concentration of a sample.
+The program is adapted to read Lotus WKS and WK1 files and to read EIA plate reader ASCII files together with a template file to calculated all concentrations from a measured EIA plate in conjunction with a calibration line measured on the same EIA plate.
+There are four regression algorithms build in the program.
+The logit regression, also known as the Rodbard of Probit regression, a linear , a linear y-squared and a polynomial regression.
+De logit regression is usually used with calibration curve that has sigmoidal form. Examples  are the calibration curves of EIA's, RIA's en nephelometric measurements.
+The linear regression is used with eg. Extinction's measurement like the Lowry protein determination according Lowry.
+De y-squared regression is used with Radial immuno diffusion tests
+De polynomial regression is an al purpose regression.
+
+Installation.
+The program consists of three parts: WLOGIT.EXE, BWCC.DLL en RTL450.DLL.
+Copy these program in one directory.
+Associate the program with the wlogit.exe program to start it..
+
+
+
+Menu
+
+
+after starting the program the screen above will be visible
+
+
+The program can work without the use of a mouse. After pressing the under lined letter of the menu that item will be started
+A space should be pressed to toggle the check boxes.
+
+The menu consists if the following groups.
+
+Common
+
+Quit, Leave the program. You can also press ALT+F4.
+
+About, information about the program.
+
+Data input
+
+The program works with data between 0.001 and 10000. Data outside these range can be used but the tables and values along the graph axes may be to long. Results are represented with three digits after the point.
+Try to keep the data between 1 and 1000 for the best results.
+
+Load, Load a Lotus WKS of WK1 file.
+
+The next layout should be used in a Lotus worksheet:
+A column:	The concentration of a calibration point or the name of a sample. With the logit regression the input of a blank (the result measured when no sample is added to the test) is necessary.
+		If there is no Blank value the measured value zero will be added in the calculation.
+B column:	The result of the measurement. For example extinctions, etc.
+C column:	The used dilution. If there is is no input the dilution of one (1) is assumed. The results will be multiplied with the given dilution.
+In the first row there can be a title that will be plotted along the axes of the drawn graph.Note that some fonts can not be drawn 90 degrees. (Times New Roman normally works fine). The graph can be saved as a Lotus PIC file. See PIC output.
+
+Fur ELISA, calculated the result of an EIA in conjunction with a template file.
+
+With the program instel.exe, or an ASCII editor templates files can be made. A template file contains the position and the dilution of the samples in a EIA plate
+A template file should look as follows:
+Concentrations of the calibration line as numbers separated by one or more spaces. The samples should start with a letter followed by a number than a comma and after the comma the dilution of the sample. The samples should be separated with one or more spaces from each other.
+Sample names are sorted in the output. So keep the numbering in mind. If samples are number as m1, m2, m3, m11 than they will be sorted as: m1, m11, 2, m3. Number them like: m01, m02, m03, m11.
+Template file example:
+m01,0100 m02,0100 m03,0100 m04,0100 m05,0100 m06,0100 m07,0100 m08,0100 m09,0100 m10,0100 m11,0100 m12,0100
+m01,0500 m02,0500 m03,0500 m04,0500 m05,0500 m06,0500 m07,0500 m08,0500 m09,0500 m10,0500 m11,0500 m12,0500
+m01,2500 m02,2500 m03,2500 m04,2500 m05,2500 m06,2500 m07,2500 m08,2500 m09,2500 m10,2500 m11,2500 m12,2500
+m13,0100 m14,0100 m15,0100 m16,0100 m17,0100 m18,0100 m19,0100 m20,0100 m21,0100 m22,0100 m23,0100 m24,0100
+m13,0500 m14,0500 m15,0500 m16,0500 m17,0500 m18,0500 m19,0500 m20,0500 m21,0500 m22,0500 m23,0500 m24,0500
+m13,2500 m14,2500 m15,2500 m16,2500 m17,2500 m18,2500 m19,2500 m20,2500 m21,2500 m22,2500 m23,2500 m24,2500 
+    0        0         0        0        0         0      0        0         0       0          0     0  
+  125      62.5      31.2      15.6    7.81    3.90     1.95     0.97     0.48     0.24     0.12    0.06 
+
+
+
+
+Manual input, 
+After selection the above menu will appear.
+With the TAB key the different controls can be accessed. After pressing Escape of Cancel concentrations and measurements can be entered without a serial dilution.
+After input of the highest concentration, the proper dilution factor and the number of replica's the program will calculated the concentrations after with you have to enter the right measurement value. In this example 1000,500 and so on.
+After pressing RETURN or OK a blank screen will appear with an input dialog. The measurement of the blank must be entered here. After this the measurements values can be entered.
+Press ESCAPE after input of the last value. The entered values may be corrected now
+Press ESCAPE again. The program will ask: "Quit calibration input?" Pressing Escape, Cancel of Yes brings the program back to the main menu.
+If Manual input is selected again data can be corrected once more.
+
+
+
+
+Results
+
+
+Calculate, calculate a regression line throught the calibration points.
+
+After data input the calibration line can be calculated. After pressing "Calculate" the above graph will appear. Pressing the letter of the calibration point remove this point from the calculation. Pressing the letter again brings the point back. The deleted point is denoted by an "X" 
+Point may also deleted with the mouse pointer and pressing the right button.
+
+After pressing ESCAPE the next dialog appears. Fill in an experiment name.
+
+
+If all measurement have one dilution press YES. 
+
+
+Fill in the dialog box to calculate concentrations
+Press ESCAPE to change the constant dilution and press ESCAPE again to go back to the main menu.
+
+Print, print all data and the graph on a printer.
+Note: Windows 3.1 fonts can not print 90 degrees. Version 3.11 with Times New Roman can print 90 degrees.
+
+Editor,  Start an editor with all calculated results.
+
+In the field "Editor Name" an editor can be typed. The program will start this editor after pressing the editor button. Make sure the editor is located in a PATH.
+The data imported are in such a format that they can be imported in a spreadsheet
+
+Join Results, puts a blank line between results with a different name
+This can be handy with ELISA plate input. The option should be selected before pressing "Calculate".
+
+
+PIC output
+A lotus PIC file is made of all the calculated graph
+
+Type of regression
+
+see introduction.
+Logit is calculated with the formulae: log(Y-blanco)/Ymax-Y)=slope*log X+intercept. Ymax is optimised to give maximum correlation
+Linear regression straight line
+y^2 vs x straight line with Y*Y. This is used with radial immuno difusion.
+The polynomial regression can be between a degree of 1(linear) until 9.
+
+Axis options
+
+X zeroforced, Y zeroforced, forces graph drawn with zero as a start.
+If the axes are not logarithmic the graph will start for that ax at zero.
+
+X axis Log, Y axis Log, draw axes logarithmic.
+This option will be turned off if there are negative values of zero.
+Ticksin, Ticksout, stripes in or outside the graph.
+
+Max X-axis, Max Y-axis
+Values larger than the values in the box will not be used in the regression.
+
+Ed Nieuwenhuys
+e-mail: ednieuw@xs4all.nl
+Jan van Gentstraat 7
+1171GH Badhoevedorp
+The Netherlands
+
+Tuesday, 05 November, 1996
+
+
+
+
+

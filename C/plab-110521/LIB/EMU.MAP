@@ -1,0 +1,1012 @@
+Error: _calibratorstring defined in module t5.c is duplicated in module t5.c
+Error: _tests_per_range defined in module t5.c is duplicated in module t5.c
+Error: _header_vector defined in module t5.c is duplicated in module t5.c
+Error: _casnumpointer defined in module t5.c is duplicated in module t5.c
+Error: _completestring defined in module t5.c is duplicated in module t5.c
+Error: _Skipnegatives defined in module t5.c is duplicated in module t5.c
+Error: _outcome_test defined in module t5.c is duplicated in module t5.c
+Error: _scale_factor defined in module t5.c is duplicated in module t5.c
+Error: _current_level defined in module t5.c is duplicated in module t5.c
+Error: _error_status defined in module t5.c is duplicated in module t5.c
+Error: _classcounter defined in module t5.c is duplicated in module t5.c
+Error: _symbol_in_use defined in module t5.c is duplicated in module t5.c
+Error: _startup_drive defined in module t5.c is duplicated in module t5.c
+Error: _upper_limit defined in module t5.c is duplicated in module t5.c
+Error: _target_level defined in module t5.c is duplicated in module t5.c
+Error: _protocol_code defined in module t5.c is duplicated in module t5.c
+Error: _symbol_legend defined in module t5.c is duplicated in module t5.c
+Error: _operator_type defined in module t5.c is duplicated in module t5.c
+Error: _minimum_value defined in module t5.c is duplicated in module t5.c
+Error: _maximum_value defined in module t5.c is duplicated in module t5.c
+Error: _maxlegendsize defined in module t5.c is duplicated in module t5.c
+Error: _defaultstring defined in module t5.c is duplicated in module t5.c
+Error: _textpointer defined in module t5.c is duplicated in module t5.c
+Error: _lower_limit defined in module t5.c is duplicated in module t5.c
+Error: _symbolcolor defined in module t5.c is duplicated in module t5.c
+Error: _rankpointer defined in module t5.c is duplicated in module t5.c
+Error: _central_value defined in module t5.c is duplicated in module t5.c
+Error: _headerlines defined in module t5.c is duplicated in module t5.c
+Error: _symbolstring defined in module t5.c is duplicated in module t5.c
+Error: _range_string defined in module t5.c is duplicated in module t5.c
+Error: _bottomlines defined in module t5.c is duplicated in module t5.c
+Error: _y_axis_title defined in module t5.c is duplicated in module t5.c
+Error: _evalpointer defined in module t5.c is duplicated in module t5.c
+Error: _second_title defined in module t5.c is duplicated in module t5.c
+Error: _column_width defined in module t5.c is duplicated in module t5.c
+Error: _error_string defined in module t5.c is duplicated in module t5.c
+Error: _startchars defined in module t5.c is duplicated in module t5.c
+Error: _Showclasses defined in module t5.c is duplicated in module t5.c
+Error: _Noofclasses defined in module t5.c is duplicated in module t5.c
+Error: _extra_text defined in module t5.c is duplicated in module t5.c
+Error: _class_unit defined in module t5.c is duplicated in module t5.c
+Error: _stat_string defined in module t5.c is duplicated in module t5.c
+Error: _Y_axis_title defined in module t5.c is duplicated in module t5.c
+Error: _subselect defined in module t5.c is duplicated in module t5.c
+Error: _first_title defined in module t5.c is duplicated in module t5.c
+Error: _new_tests defined in module t5.c is duplicated in module t5.c
+Error: _nooftests defined in module t5.c is duplicated in module t5.c
+Error: _medianrank defined in module t5.c is duplicated in module t5.c
+Error: _textstring defined in module t5.c is duplicated in module t5.c
+Error: _teststring defined in module t5.c is duplicated in module t5.c
+Error: _Output_path defined in module t5.c is duplicated in module t5.c
+Error: _Median_flag defined in module t5.c is duplicated in module t5.c
+Error: _Symbol_type defined in module t5.c is duplicated in module t5.c
+Error: _Symbol_size defined in module t5.c is duplicated in module t5.c
+Error: _testunit defined in module t5.c is duplicated in module t5.c
+Error: _evalstring defined in module t5.c is duplicated in module t5.c
+Error: _valid_data defined in module t5.c is duplicated in module t5.c
+Error: _Legendpos defined in module t5.c is duplicated in module t5.c
+Error: _evaltext defined in module t5.c is duplicated in module t5.c
+Error: _exponent defined in module t5.c is duplicated in module t5.c
+Error: _Datasymbol defined in module t5.c is duplicated in module t5.c
+Error: _y_origin defined in module t5.c is duplicated in module t5.c
+Error: _Inter_bar defined in module t5.c is duplicated in module t5.c
+Error: _x_origin defined in module t5.c is duplicated in module t5.c
+Error: _tracefile defined in module t5.c is duplicated in module t5.c
+Error: _mean_diff defined in module t5.c is duplicated in module t5.c
+Error: _rowlabel defined in module t5.c is duplicated in module t5.c
+Error: _errstring defined in module t5.c is duplicated in module t5.c
+Error: _temprank defined in module t5.c is duplicated in module t5.c
+Error: _symbols defined in module t5.c is duplicated in module t5.c
+Error: _success defined in module t5.c is duplicated in module t5.c
+Error: _maxlegend defined in module t5.c is duplicated in module t5.c
+Error: _y_length defined in module t5.c is duplicated in module t5.c
+Error: _x_length defined in module t5.c is duplicated in module t5.c
+Error: _zeroflag defined in module t5.c is duplicated in module t5.c
+Error: _columns defined in module t5.c is duplicated in module t5.c
+Error: _var_diff defined in module t5.c is duplicated in module t5.c
+Error: _Mean_flag defined in module t5.c is duplicated in module t5.c
+Error: _testname defined in module t5.c is duplicated in module t5.c
+Error: _tok_type defined in module t5.c is duplicated in module t5.c
+Error: _result defined in module t5.c is duplicated in module t5.c
+Error: _filename defined in module t5.c is duplicated in module t5.c
+Error: _Inter_t defined in module t5.c is duplicated in module t5.c
+Error: _X_length defined in module t5.c is duplicated in module t5.c
+Error: _Plotter defined in module t5.c is duplicated in module t5.c
+Error: _tempdata defined in module t5.c is duplicated in module t5.c
+Error: __stklen defined in module t5.c is duplicated in module t5.c
+Error: _mantissa defined in module t5.c is duplicated in module t5.c
+Error: _Sem_flag defined in module t5.c is duplicated in module t5.c
+Error: _pic_no defined in module t5.c is duplicated in module t5.c
+Error: _sd_diff defined in module t5.c is duplicated in module t5.c
+Error: _buffer defined in module t5.c is duplicated in module t5.c
+Error: _Logyflag defined in module t5.c is duplicated in module t5.c
+Error: _Logxflag defined in module t5.c is duplicated in module t5.c
+Error: _tt_file defined in module t5.c is duplicated in module t5.c
+Error: _logflag defined in module t5.c is duplicated in module t5.c
+Error: _option defined in module t5.c is duplicated in module t5.c
+Error: _Iqr_flag defined in module t5.c is duplicated in module t5.c
+Error: _ticks defined in module t5.c is duplicated in module t5.c
+Error: _logfile defined in module t5.c is duplicated in module t5.c
+Error: _casnum defined in module t5.c is duplicated in module t5.c
+Error: _fpout defined in module t5.c is duplicated in module t5.c
+Error: _Se_flag defined in module t5.c is duplicated in module t5.c
+Error: _Sd_flag defined in module t5.c is duplicated in module t5.c
+Error: _class defined in module t5.c is duplicated in module t5.c
+Error: _token defined in module t5.c is duplicated in module t5.c
+Error: _Logflag defined in module t5.c is duplicated in module t5.c
+Error: _n_diff defined in module t5.c is duplicated in module t5.c
+Error: _test defined in module t5.c is duplicated in module t5.c
+Error: _xpos defined in module t5.c is duplicated in module t5.c
+Error: _vars defined in module t5.c is duplicated in module t5.c
+Error: _rows defined in module t5.c is duplicated in module t5.c
+Error: _Cut_off defined in module t5.c is duplicated in module t5.c
+Error: _Ymax defined in module t5.c is duplicated in module t5.c
+Error: _Centile defined in module t5.c is duplicated in module t5.c
+Error: _Inter defined in module t5.c is duplicated in module t5.c
+Error: _ttlog defined in module t5.c is duplicated in module t5.c
+Error: _Show defined in module t5.c is duplicated in module t5.c
+Error: _max defined in module t5.c is duplicated in module t5.c
+Error: _Color defined in module t5.c is duplicated in module t5.c
+Error: _Toggle defined in module t5.c is duplicated in module t5.c
+Error: _Group defined in module t5.c is duplicated in module t5.c
+Error: _main defined in module t5.c is duplicated in module t5.c
+Error: _mean defined in module t5.c is duplicated in module t5.c
+Error: _datapointer0 defined in module t5.c is duplicated in module t5.c
+Error: _Small defined in module t5.c is duplicated in module t5.c
+Error: _Stat defined in module t5.c is duplicated in module t5.c
+Error: _ttpic defined in module t5.c is duplicated in module t5.c
+Error: _tick defined in module t5.c is duplicated in module t5.c
+Error: _fpin defined in module t5.c is duplicated in module t5.c
+Error: _var defined in module t5.c is duplicated in module t5.c
+Error: _rank defined in module t5.c is duplicated in module t5.c
+Error: _Legend defined in module t5.c is duplicated in module t5.c
+Error: _Tbar defined in module t5.c is duplicated in module t5.c
+Error: _Swap defined in module t5.c is duplicated in module t5.c
+Error: _bar defined in module t5.c is duplicated in module t5.c
+Error: _Trace defined in module t5.c is duplicated in module t5.c
+Error: _dy defined in module t5.c is duplicated in module t5.c
+Error: _Combi defined in module t5.c is duplicated in module t5.c
+Error: _min defined in module t5.c is duplicated in module t5.c
+Error: _flag defined in module t5.c is duplicated in module t5.c
+Error: _Tip defined in module t5.c is duplicated in module t5.c
+Error: _Intra defined in module t5.c is duplicated in module t5.c
+Error: _Bar defined in module t5.c is duplicated in module t5.c
+Error: _Cap defined in module t5.c is duplicated in module t5.c
+Error: _Line defined in module t5.c is duplicated in module t5.c
+Error: _All defined in module t5.c is duplicated in module t5.c
+Error: _Nn defined in module t5.c is duplicated in module t5.c
+Error: _sd defined in module t5.c is duplicated in module t5.c
+Error: _Cut_off2 defined in module t5.c is duplicated in module t5.c
+Error: _Cut_off1 defined in module t5.c is duplicated in module t5.c
+Error: _info2 defined in module t5.c is duplicated in module t5.c
+Error: _info1 defined in module t5.c is duplicated in module t5.c
+Error: _data0 defined in module t5.c is duplicated in module t5.c
+Error: _i75 defined in module t5.c is duplicated in module t5.c
+Error: _i25 defined in module t5.c is duplicated in module t5.c
+Error: _i50 defined in module t5.c is duplicated in module t5.c
+Error: _mantissa_of_calibrator defined in module t5.c is duplicated in module t5.c
+Error: _value_of_calibrator defined in module t5.c is duplicated in module t5.c
+Error: _central_value_string defined in module t5.c is duplicated in module t5.c
+Error: _samplenumber_string defined in module t5.c is duplicated in module t5.c
+Error: _samplecode_string defined in module t5.c is duplicated in module t5.c
+Error: _noofcalibrators defined in module t5.c is duplicated in module t5.c
+Error: _Ranges_in_header defined in module t5.c is duplicated in module t5.c
+Error: _upper_deviation defined in module t5.c is duplicated in module t5.c
+Error: _upper_limit_diff defined in module t5.c is duplicated in module t5.c
+Error: _lower_deviation defined in module t5.c is duplicated in module t5.c
+Error: _lower_limit_diff defined in module t5.c is duplicated in module t5.c
+
+ Start  Stop   Length Name               Class
+
+ 00000H 001C3H 001C4H _TEXT              CODE
+ 001C4H 007CBH 00608H T5_TEXT            CODE
+ 007CCH 011E2H 00A17H $T5START_TEXT      CODE
+ 011E3H 03CF3H 02B11H $T5OPT_TEXT        CODE
+ 03CF4H 05090H 0139DH $T5FILE_TEXT       CODE
+ 05091H 06CA5H 01C15H $T5SELEC_TEXT      CODE
+ 06CA6H 08E8EH 021E9H $TT_TEXT           CODE
+ 08E8FH 0CA4AH 03BBCH $HG_TEXT           CODE
+ 0CA4BH 0D420H 009D6H $OGIVE_TEXT        CODE
+ 0D421H 0E412H 00FF2H $PARSE_TEXT        CODE
+ 0E413H 1202EH 03C1CH $T5VARIA_TEXT      CODE
+ 1202FH 14AF5H 02AC7H $PIC_TEXT          CODE
+ 14B00H 14B92H 00093H _DATA              DATA
+ 14B94H 14B97H 00004H _EMUSEG            DATA
+ 14B98H 14B99H 00002H _CRTSEG            DATA
+ 14B9AH 14B9AH 00000H _CVTSEG            DATA
+ 14B9AH 14B9AH 00000H _SCNSEG            DATA
+ 14B9AH 17C90H 030F7H T5_DATA            DATA
+ 17C92H 17E8FH 001FEH $T5START_DATA      DATA
+ 17E90H 18D2FH 00EA0H $T5OPT_DATA        DATA
+ 18D30H 19177H 00448H $T5FILE_DATA       DATA
+ 19178H 199BDH 00846H $T5SELEC_DATA      DATA
+ 199BEH 1A21CH 0085FH $TT_DATA           DATA
+ 1A21EH 1ADF5H 00BD8H $HG_DATA           DATA
+ 1ADF6H 1AF4FH 0015AH $OGIVE_DATA        DATA
+ 1AF50H 1B017H 000C8H $PARSE_DATA        DATA
+ 1B018H 1B7FEH 007E7H $T5VARIA_DATA      DATA
+ 1B800H 1BB3EH 0033FH $PIC_DATA          DATA
+ 1BB40H 1BC25H 000E6H _STACK             STACK
+
+Detailed map of segments
+
+0000:0000 01C4 C=CODE S=_TEXT G=(none) M=C0H ACBP=28
+001C:0004 0304 C=CODE S=T5_TEXT G=(none) M=t5.c ACBP=28
+001C:0308 0304 C=CODE S=T5_TEXT G=(none) M=t5.c ACBP=28
+007C:000C 0A17 C=CODE S=$T5START_TEXT G=(none) M=$t5start.c ACBP=28
+011E:0003 2B11 C=CODE S=$T5OPT_TEXT G=(none) M=$t5opt.c ACBP=28
+03CF:0004 139D C=CODE S=$T5FILE_TEXT G=(none) M=$t5file.c ACBP=28
+0509:0001 1C15 C=CODE S=$T5SELEC_TEXT G=(none) M=$t5selec.c ACBP=28
+06CA:0006 21E9 C=CODE S=$TT_TEXT G=(none) M=$tt.c ACBP=28
+08E8:000F 3BBC C=CODE S=$HG_TEXT G=(none) M=$hg.c ACBP=28
+0CA4:000B 09D6 C=CODE S=$OGIVE_TEXT G=(none) M=$ogive.c ACBP=28
+0D42:0001 0FF2 C=CODE S=$PARSE_TEXT G=(none) M=$parse.c ACBP=28
+0E41:0003 3C1C C=CODE S=$T5VARIA_TEXT G=(none) M=$t5varia.c ACBP=28
+1202:000F 2AC7 C=CODE S=$PIC_TEXT G=(none) M=$pic.c ACBP=28
+14B0:0000 0093 C=DATA S=_DATA G=DGROUP M=C0H ACBP=68
+14B9:0004 0004 C=DATA S=_EMUSEG G=DGROUP M=C0H ACBP=58
+14B9:0008 0002 C=DATA S=_CRTSEG G=DGROUP M=C0H ACBP=58
+14B9:000A 0000 C=DATA S=_CVTSEG G=DGROUP M=C0H ACBP=48
+14B9:000A 0000 C=DATA S=_SCNSEG G=DGROUP M=C0H ACBP=48
+14B9:000A 187B C=DATA S=T5_DATA G=(none) M=t5.c ACBP=48
+14B9:1886 187B C=DATA S=T5_DATA G=(none) M=t5.c ACBP=48
+17C9:0002 01FE C=DATA S=$T5START_DATA G=(none) M=$t5start.c ACBP=48
+17E9:0000 0EA0 C=DATA S=$T5OPT_DATA G=(none) M=$t5opt.c ACBP=48
+18D3:0000 0448 C=DATA S=$T5FILE_DATA G=(none) M=$t5file.c ACBP=48
+1917:0008 0846 C=DATA S=$T5SELEC_DATA G=(none) M=$t5selec.c ACBP=48
+199B:000E 085F C=DATA S=$TT_DATA G=(none) M=$tt.c ACBP=48
+1A21:000E 0BD8 C=DATA S=$HG_DATA G=(none) M=$hg.c ACBP=48
+1ADF:0006 015A C=DATA S=$OGIVE_DATA G=(none) M=$ogive.c ACBP=48
+1AF5:0000 00C8 C=DATA S=$PARSE_DATA G=(none) M=$parse.c ACBP=48
+1B01:0008 07E7 C=DATA S=$T5VARIA_DATA G=(none) M=$t5varia.c ACBP=48
+1B80:0000 033F C=DATA S=$PIC_DATA G=(none) M=$pic.c ACBP=48
+1BB4:0000 00E6 C=STACK S=_STACK G=(none) M=C0H ACBP=74
+
+  Address         Publics by Name
+
+ 0000:01C2       DGROUP@
+ 1BB4:00E6       emuTop@
+ 1BB4:00DA       emws_adjust
+ 1BB4:00DE       emws_BPsafe
+ 1BB4:00D6       emws_control
+ 1BB4:00DC       emws_fixSeg
+ 1BB4:00C0       emws_initialSP
+ 1BB4:0000       emws_limitSP
+ 1BB4:00D0       emws_nmiVector
+ 1BB4:00CC       emws_saveVector
+ 1BB4:00E0       emws_stamp
+ 1BB4:00D4       emws_status
+ 1BB4:00D8       emws_TOS
+ 1BB4:00E4       emws_version
+ 0000:01AA       _abort
+ 14B9:02DF       _All
+ 007C:000C       _allocate
+ 0D42:0997       _arith
+ 1202:214E       _ascal
+ 14B9:02F9       _bar
+ 14B9:02E3       _Bar
+ 14B9:1014       _bottomlines
+ 14B9:0AFD       _buffer
+ 14B9:16EA       _calibratorstring
+ 14B9:0036       _Cap
+ 14B9:0AEF       _casnum
+ 14B9:16D6       _casnumpointer
+ 14B9:000A       _Centile
+ 14B9:1018       _central_value
+ 14B9:005D       _central_value_string
+ 03CF:0004       _check_output_file
+ 0E41:0003       _check_teststring
+ 14B9:0499       _class
+ 14B9:106C       _classcounter
+ 14B9:0F10       _class_unit
+ 007C:05DA       _clear_array1
+ 14B9:002A       _Color
+ 14B9:0DB1       _columns
+ 011E:2531       _column_menu
+ 14B9:0F6C       _column_width
+ 14B9:02F3       _Combi
+ 14B9:16CC       _completestring
+ 0E41:0099       _count_char
+ 14B9:16BE       _current_level
+ 08E8:3064       _cut_off
+ 14B9:003E       _Cut_off
+ 14B9:028B       _Cut_off1
+ 14B9:02B3       _Cut_off2
+ 14B9:01E5       _data0
+ 14B9:03F9       _datapointer0
+ 14B9:0E33       _Datasymbol
+ 14B9:103E       _defaultstring
+ 007C:0915       _down
+ 0E41:00CD       _dump_block
+ 14B9:02F5       _dy
+ 14B0:0071       _environ
+ 14B0:007F       _errno
+ 14B9:16BC       _error_status
+ 14B9:0064       _error_string
+ 14B9:0DCF       _errstring
+ 14B9:0FBF       _evalpointer
+ 14B9:0E4D       _evalstring
+ 14B9:0E45       _evaltext
+ 011E:2656       _eval_menu
+ 0E41:01D6       _expand_evalstring
+ 14B9:0E35       _exponent
+ 14B9:0F18       _extra_text
+ 011E:29A6       _extra_text_menu
+ 007C:07E7       _farewell
+ 03CF:0FAC       _fgetline
+ 14B9:0D21       _filename
+ 0E41:037D       _find_dx
+ 0E41:03D2       _find_row
+ 0E41:0429       _find_symbols_in_use
+ 0E41:05E0       _find_values
+ 0D42:0E54       _find_var
+ 14B9:0E6E       _first_title
+ 14B9:02E7       _flag
+ 14B9:0305       _fpin
+ 14B9:0AEB       _fpout
+ 007C:0960       _frame
+ 06CA:12BB       _frequency_per_class
+ 0E41:0844       _getdata
+ 0E41:08FA       _getkey
+ 0509:0001       _getselectionmode
+ 0E41:09C7       _get_bottomlines
+ 0E41:0C21       _get_diff
+ 0D42:0281       _get_exp
+ 0E41:1188       _get_headerlines
+ 0E41:127D       _get_ile
+ 0E41:1446       _get_legendlines
+ 0E41:14A8       _get_maxlegend
+ 0E41:154D       _get_mean
+ 011E:0003       _get_options
+ 0E41:1BD7       _get_symbol
+ 0D42:02BC       _get_token
+ 14B9:0401       _Group
+ 14B9:1016       _headerlines
+ 14B9:004C       _header_vector
+ 08E8:000F       _hg
+ 14B9:01DD       _i25
+ 14B9:01D9       _i50
+ 14B9:01E1       _i75
+ 0E41:1C85       _ilevalue
+ 14B9:01E9       _info1
+ 14B9:023A       _info2
+ 007C:0671       _initialise_arrays
+ 14B9:0409       _Inter
+ 14B9:0E2D       _Inter_bar
+ 14B9:0D1D       _Inter_t
+ 14B9:02E5       _Intra
+ 14B9:0AF7       _Iqr_flag
+ 0E41:1DFA       _isdecimal
+ 0D42:0F5C       _isdelim
+ 0E41:1E36       _isdelimiter
+ 0E41:1E6A       _isnumber
+ 0D42:0FC5       _isvariable
+ 0E41:1F0F       _isvoid
+ 0D42:0F3B       _iswhite
+ 0D42:0F97       _is_in
+ 0E41:1F4A       _keycopy
+ 14B9:002C       _Legend
+ 14B9:002E       _Legendpos
+ 011E:23A7       _legend_menu
+ 0E41:220E       _lettertonumber
+ 0D42:0517       _level1
+ 0D42:08C7       _level10
+ 0D42:05E7       _level2
+ 0D42:063A       _level3
+ 0D42:068D       _level4
+ 0D42:06E0       _level5
+ 0D42:073C       _level6
+ 0D42:0798       _level7
+ 0D42:07FA       _level8
+ 0D42:084A       _level9
+ 14B9:02E1       _Line
+ 14B9:0AF3       _logfile
+ 14B9:0447       _Logflag
+ 14B9:0AFB       _logflag
+ 14B9:001C       _Logxflag
+ 14B9:001E       _Logyflag
+ 0E41:2292       _lotustonumber
+ 14B9:017D       _lower_deviation
+ 14B9:1036       _lower_limit
+ 14B9:0179       _lower_limit_diff
+ 001C:0004       _main
+ 1202:2A7F       _makelog
+ 03CF:1070       _make_filename
+ 0509:01AD       _make_subselection
+ 03CF:0118       _make_ttname
+ 14B9:0D07       _mantissa
+ 14B9:0097       _mantissa_of_calibrator
+ 14B9:0405       _max
+ 14B9:1044       _maximum_value
+ 14B9:0DC7       _maxlegend
+ 14B9:1042       _maxlegendsize
+ 14B9:03FD       _mean
+ 14B9:0E1F       _mean_diff
+ 14B9:0DA7       _Mean_flag
+ 14B9:0E66       _medianrank
+ 14B9:0E57       _Median_flag
+ 0E41:233A       _menu_line
+ 14B9:02EF       _min
+ 14B9:104C       _minimum_value
+ 0E41:2389       _minmax
+ 0E41:28EB       _minmax2
+ 14B9:0E6C       _new_tests
+ 14B9:0020       _Nn
+ 14B9:0095       _noofcalibrators
+ 14B9:0026       _Noofclasses
+ 14B9:0E6A       _nooftests
+ 007C:07CE       _no_room
+ 0E41:29B9       _numbertoletter
+ 0E41:2A0E       _numbertolotus
+ 14B9:0445       _n_diff
+ 0CA4:000B       _ogive
+ 03CF:026D       _openin
+ 03CF:02B6       _openout
+ 03CF:02FF       _open_logfile
+ 03CF:035D       _open_tracefile
+ 14B9:1054       _operator_type
+ 14B9:0AF9       _option
+ 14B9:16C8       _outcome_test
+ 14B9:00B7       _Output_path
+ 0D42:0001       _parse
+ 03CF:1171       _parse_line
+ 1202:000F       _picbottomline
+ 1202:060C       _piccolor
+ 1202:0040       _piccolumnlegend
+ 1202:0355       _piccorner
+ 1202:10E5       _picdot
+ 1202:0671       _picdraw
+ 1202:0866       _picend
+ 1202:0386       _picextra_text
+ 1202:0945       _picfirst_title
+ 1202:05C9       _picfont
+ 1202:0A2F       _piclegend
+ 1202:0595       _picmove
+ 1202:027D       _picopen
+ 1202:1BA2       _picranges
+ 03CF:03F9       _picsave
+ 1202:0980       _picsecond_title
+ 1202:063D       _picsize
+ 1202:0FA9       _picstring
+ 1202:06A5       _pictext
+ 1202:0727       _pictextlines
+ 1202:09FE       _pictopline
+ 1202:08B5       _picxy
+ 1202:09BB       _picy_axis_title
+ 1202:14F5       _picy_cal
+ 14B9:0091       _pic_no
+ 14B9:0028       _Plotter
+ 0D42:092B       _primitive
+ 007C:0A00       _printstring
+ 14B9:1059       _protocol_code
+ 0D42:0E21       _putback
+ 0E41:2A9F       _qs
+ 0E41:2B6D       _qs0
+ 0E41:2A72       _quoted
+ 14B9:0030       _Ranges_in_header
+ 14B9:006F       _range_string
+ 14B9:02FD       _rank
+ 14B9:1020       _rankpointer
+ 0E41:2D0F       _rank_data
+ 0E41:3503       _rank_medians
+ 03CF:0642       _read_casenames
+ 03CF:06FC       _read_data
+ 011E:1202       _read_environment
+ 03CF:08FA       _read_ile
+ 03CF:09CD       _read_info
+ 03CF:0BE7       _read_minmax
+ 03CF:0C77       _read_ranks
+ 03CF:0D72       _read_testunits
+ 03CF:0E57       _read_wksdata
+ 14B9:0014       _result
+ 14B9:0DF7       _rowlabel
+ 14B9:040D       _rows
+ 14B9:0191       _samplecode_string
+ 14B9:0195       _samplenumber_string
+ 011E:2321       _save_menu
+ 14B9:16C0       _scale_factor
+ 14B9:02DB       _sd
+ 14B9:0CFD       _sd_diff
+ 14B9:0AE9       _Sd_flag
+ 14B9:0F6E       _second_title
+ 007C:084A       _select_graph
+ 0509:14A7       _select_tests
+ 14B9:0D05       _Sem_flag
+ 0D42:0EA9       _serror
+ 011E:2247       _set_env_variable
+ 14B9:0024       _Se_flag
+ 14B9:0044       _Show
+ 14B9:0022       _Showclasses
+ 06CA:0E9A       _showclasses
+ 0E41:368A       _show_text
+ 14B9:16CA       _Skipnegatives
+ 14B9:0048       _Small
+ 14B9:0F1C       _startchars
+ 14B9:1061       _startup_drive
+ 007C:08B3       _startup_message
+ 14B9:0032       _Stat
+ 14B9:0084       _stat_string
+ 0E41:3842       _strinput
+ 0E41:3897       _stripwhites
+ 0E41:396F       _strleft
+ 0509:191F       _strmenu
+ 0E41:39AB       _strpos
+ 14B9:001A       _subselect
+ 14B9:0012       _success
+ 14B9:0046       _Swap
+ 14B9:1024       _symbolcolor
+ 14B9:0DC9       _symbols
+ 14B9:016E       _symbolstring
+ 0E41:39F6       _symbols_in_use
+ 14B9:1063       _symbol_in_use
+ 14B9:1055       _symbol_legend
+ 011E:27D3       _symbol_menu
+ 14B9:0E55       _Symbol_size
+ 14B9:004A       _Symbol_type
+ 0E41:3A4E       _t95
+ 14B9:105B       _target_level
+ 14B9:02FB       _Tbar
+ 14B9:0D17       _tempdata
+ 14B9:0DCB       _temprank
+ 14B9:0435       _test
+ 14B9:0DA3       _testname
+ 14B9:0E59       _teststring
+ 14B9:16DA       _tests_per_range
+ 14B9:0E51       _testunit
+ 14B9:103A       _textpointer
+ 14B9:0E62       _textstring
+ 14B9:0309       _tick
+ 14B9:0093       _ticks
+ 14B9:003A       _Tip
+ 14B9:0403       _Toggle
+ 14B9:0449       _token
+ 14B9:0DA2       _tok_type
+ 0E41:3ADC       _toupper_evalstring
+ 14B9:0042       _Trace
+ 14B9:0E27       _tracefile
+ 06CA:0006       _tt
+ 14B9:0162       _ttlog
+ 14B9:0159       _ttpic
+ 14B9:0108       _tt_file
+ 06CA:0F7E       _tt_parameters
+ 0D42:0DBD       _unary
+ 0D42:019D       _unquote
+ 14B9:0189       _upper_deviation
+ 14B9:105D       _upper_limit
+ 14B9:0185       _upper_limit_diff
+ 14B9:0E49       _valid_data
+ 14B9:0199       _value_of_calibrator
+ 14B9:0301       _var
+ 14B9:040F       _vars
+ 14B9:0DA9       _var_diff
+ 08E8:31BA       _warning
+ 08E8:322D       _write_bar
+ 0E41:3B4E       _write_screen
+ 06CA:0CD5       _write_tt
+ 06CA:15F0       _write_ttlog
+ 14B9:0433       _xpos
+ 14B9:0D1B       _X_length
+ 14B9:0DC3       _x_length
+ 14B9:0E2B       _x_origin
+ 14B9:0016       _Ymax
+ 14B9:0EBF       _Y_axis_title
+ 14B9:0FC3       _y_axis_title
+ 14B9:0DC5       _y_length
+ 14B9:0E31       _y_origin
+ 14B9:0DB3       _zeroflag
+ 14B0:0081       __8087
+ 14B0:006B       __argc
+ 14B0:006D       __argv
+ 14B0:008B       __brklvl
+ 14B0:0075       __envLng
+ 14B0:0077       __envseg
+ 14B0:0079       __envSize
+ 0000:0103       __exit
+ 14B0:0087       __heapbase
+ 14B0:008F       __heaptop
+ 14B0:005B       __Int0Vector
+ 14B0:005F       __Int4Vector
+ 14B0:0063       __Int5Vector
+ 14B0:0067       __Int6Vector
+ 14B0:007D       __osmajor
+ 14B0:007E       __osminor
+ 14B0:007B       __psp
+ 14B0:009A       __RealCvtVector
+ 0000:0168       __restorezero
+ 14B0:009A       __ScanTodVector
+ 14B0:0083       __StartTime
+ 14B9:0177       __stklen
+ 14B0:007D       __version
+
+  Address         Publics by Value
+
+ 0000:0103       __exit
+ 0000:0168       __restorezero
+ 0000:01AA       _abort
+ 0000:01C2       DGROUP@
+ 001C:0004       _main
+ 007C:000C       _allocate
+ 007C:05DA       _clear_array1
+ 007C:0671       _initialise_arrays
+ 007C:07CE       _no_room
+ 007C:07E7       _farewell
+ 007C:084A       _select_graph
+ 007C:08B3       _startup_message
+ 007C:0915       _down
+ 007C:0960       _frame
+ 007C:0A00       _printstring
+ 011E:0003       _get_options
+ 011E:1202       _read_environment
+ 011E:2247       _set_env_variable
+ 011E:2321       _save_menu
+ 011E:23A7       _legend_menu
+ 011E:2531       _column_menu
+ 011E:2656       _eval_menu
+ 011E:27D3       _symbol_menu
+ 011E:29A6       _extra_text_menu
+ 03CF:0004       _check_output_file
+ 03CF:0118       _make_ttname
+ 03CF:026D       _openin
+ 03CF:02B6       _openout
+ 03CF:02FF       _open_logfile
+ 03CF:035D       _open_tracefile
+ 03CF:03F9       _picsave
+ 03CF:0642       _read_casenames
+ 03CF:06FC       _read_data
+ 03CF:08FA       _read_ile
+ 03CF:09CD       _read_info
+ 03CF:0BE7       _read_minmax
+ 03CF:0C77       _read_ranks
+ 03CF:0D72       _read_testunits
+ 03CF:0E57       _read_wksdata
+ 03CF:0FAC       _fgetline
+ 03CF:1070       _make_filename
+ 03CF:1171       _parse_line
+ 0509:0001       _getselectionmode
+ 0509:01AD       _make_subselection
+ 0509:14A7       _select_tests
+ 0509:191F       _strmenu
+ 06CA:0006       _tt
+ 06CA:0CD5       _write_tt
+ 06CA:0E9A       _showclasses
+ 06CA:0F7E       _tt_parameters
+ 06CA:12BB       _frequency_per_class
+ 06CA:15F0       _write_ttlog
+ 08E8:000F       _hg
+ 08E8:3064       _cut_off
+ 08E8:31BA       _warning
+ 08E8:322D       _write_bar
+ 0CA4:000B       _ogive
+ 0D42:0001       _parse
+ 0D42:019D       _unquote
+ 0D42:0281       _get_exp
+ 0D42:02BC       _get_token
+ 0D42:0517       _level1
+ 0D42:05E7       _level2
+ 0D42:063A       _level3
+ 0D42:068D       _level4
+ 0D42:06E0       _level5
+ 0D42:073C       _level6
+ 0D42:0798       _level7
+ 0D42:07FA       _level8
+ 0D42:084A       _level9
+ 0D42:08C7       _level10
+ 0D42:092B       _primitive
+ 0D42:0997       _arith
+ 0D42:0DBD       _unary
+ 0D42:0E21       _putback
+ 0D42:0E54       _find_var
+ 0D42:0EA9       _serror
+ 0D42:0F3B       _iswhite
+ 0D42:0F5C       _isdelim
+ 0D42:0F97       _is_in
+ 0D42:0FC5       _isvariable
+ 0E41:0003       _check_teststring
+ 0E41:0099       _count_char
+ 0E41:00CD       _dump_block
+ 0E41:01D6       _expand_evalstring
+ 0E41:037D       _find_dx
+ 0E41:03D2       _find_row
+ 0E41:0429       _find_symbols_in_use
+ 0E41:05E0       _find_values
+ 0E41:0844       _getdata
+ 0E41:08FA       _getkey
+ 0E41:09C7       _get_bottomlines
+ 0E41:0C21       _get_diff
+ 0E41:1188       _get_headerlines
+ 0E41:127D       _get_ile
+ 0E41:1446       _get_legendlines
+ 0E41:14A8       _get_maxlegend
+ 0E41:154D       _get_mean
+ 0E41:1BD7       _get_symbol
+ 0E41:1C85       _ilevalue
+ 0E41:1DFA       _isdecimal
+ 0E41:1E36       _isdelimiter
+ 0E41:1E6A       _isnumber
+ 0E41:1F0F       _isvoid
+ 0E41:1F4A       _keycopy
+ 0E41:220E       _lettertonumber
+ 0E41:2292       _lotustonumber
+ 0E41:233A       _menu_line
+ 0E41:2389       _minmax
+ 0E41:28EB       _minmax2
+ 0E41:29B9       _numbertoletter
+ 0E41:2A0E       _numbertolotus
+ 0E41:2A72       _quoted
+ 0E41:2A9F       _qs
+ 0E41:2B6D       _qs0
+ 0E41:2D0F       _rank_data
+ 0E41:3503       _rank_medians
+ 0E41:368A       _show_text
+ 0E41:3842       _strinput
+ 0E41:3897       _stripwhites
+ 0E41:396F       _strleft
+ 0E41:39AB       _strpos
+ 0E41:39F6       _symbols_in_use
+ 0E41:3A4E       _t95
+ 0E41:3ADC       _toupper_evalstring
+ 0E41:3B4E       _write_screen
+ 1202:000F       _picbottomline
+ 1202:0040       _piccolumnlegend
+ 1202:027D       _picopen
+ 1202:0355       _piccorner
+ 1202:0386       _picextra_text
+ 1202:0595       _picmove
+ 1202:05C9       _picfont
+ 1202:060C       _piccolor
+ 1202:063D       _picsize
+ 1202:0671       _picdraw
+ 1202:06A5       _pictext
+ 1202:0727       _pictextlines
+ 1202:0866       _picend
+ 1202:08B5       _picxy
+ 1202:0945       _picfirst_title
+ 1202:0980       _picsecond_title
+ 1202:09BB       _picy_axis_title
+ 1202:09FE       _pictopline
+ 1202:0A2F       _piclegend
+ 1202:0FA9       _picstring
+ 1202:10E5       _picdot
+ 1202:14F5       _picy_cal
+ 1202:1BA2       _picranges
+ 1202:214E       _ascal
+ 1202:2A7F       _makelog
+ 14B0:005B       __Int0Vector
+ 14B0:005F       __Int4Vector
+ 14B0:0063       __Int5Vector
+ 14B0:0067       __Int6Vector
+ 14B0:006B       __argc
+ 14B0:006D       __argv
+ 14B0:0071       _environ
+ 14B0:0075       __envLng
+ 14B0:0077       __envseg
+ 14B0:0079       __envSize
+ 14B0:007B       __psp
+ 14B0:007D       __version
+ 14B0:007D       __osmajor
+ 14B0:007E       __osminor
+ 14B0:007F       _errno
+ 14B0:0081       __8087
+ 14B0:0083       __StartTime
+ 14B0:0087       __heapbase
+ 14B0:008B       __brklvl
+ 14B0:008F       __heaptop
+ 14B9:000A       _Centile
+ 14B0:009A       __ScanTodVector
+ 14B0:009A       __RealCvtVector
+ 14B9:0012       _success
+ 14B9:0014       _result
+ 14B9:0016       _Ymax
+ 14B9:001A       _subselect
+ 14B9:001C       _Logxflag
+ 14B9:001E       _Logyflag
+ 14B9:0020       _Nn
+ 14B9:0022       _Showclasses
+ 14B9:0024       _Se_flag
+ 14B9:0026       _Noofclasses
+ 14B9:0028       _Plotter
+ 14B9:002A       _Color
+ 14B9:002C       _Legend
+ 14B9:002E       _Legendpos
+ 14B9:0030       _Ranges_in_header
+ 14B9:0032       _Stat
+ 14B9:0036       _Cap
+ 14B9:003A       _Tip
+ 14B9:003E       _Cut_off
+ 14B9:0042       _Trace
+ 14B9:0044       _Show
+ 14B9:0046       _Swap
+ 14B9:0048       _Small
+ 14B9:004A       _Symbol_type
+ 14B9:004C       _header_vector
+ 14B9:005D       _central_value_string
+ 14B9:0064       _error_string
+ 14B9:006F       _range_string
+ 14B9:0084       _stat_string
+ 14B9:0091       _pic_no
+ 14B9:0093       _ticks
+ 14B9:0095       _noofcalibrators
+ 14B9:0097       _mantissa_of_calibrator
+ 14B9:00B7       _Output_path
+ 14B9:0108       _tt_file
+ 14B9:0159       _ttpic
+ 14B9:0162       _ttlog
+ 14B9:016E       _symbolstring
+ 14B9:0177       __stklen
+ 14B9:0179       _lower_limit_diff
+ 14B9:017D       _lower_deviation
+ 14B9:0185       _upper_limit_diff
+ 14B9:0189       _upper_deviation
+ 14B9:0191       _samplecode_string
+ 14B9:0195       _samplenumber_string
+ 14B9:0199       _value_of_calibrator
+ 14B9:01D9       _i50
+ 14B9:01DD       _i25
+ 14B9:01E1       _i75
+ 14B9:01E5       _data0
+ 14B9:01E9       _info1
+ 14B9:023A       _info2
+ 14B9:028B       _Cut_off1
+ 14B9:02B3       _Cut_off2
+ 14B9:02DB       _sd
+ 14B9:02DF       _All
+ 14B9:02E1       _Line
+ 14B9:02E3       _Bar
+ 14B9:02E5       _Intra
+ 14B9:02E7       _flag
+ 14B9:02EF       _min
+ 14B9:02F3       _Combi
+ 14B9:02F5       _dy
+ 14B9:02F9       _bar
+ 14B9:02FB       _Tbar
+ 14B9:02FD       _rank
+ 14B9:0301       _var
+ 14B9:0305       _fpin
+ 14B9:0309       _tick
+ 14B9:03F9       _datapointer0
+ 14B9:03FD       _mean
+ 14B9:0401       _Group
+ 14B9:0403       _Toggle
+ 14B9:0405       _max
+ 14B9:0409       _Inter
+ 14B9:040D       _rows
+ 14B9:040F       _vars
+ 14B9:0433       _xpos
+ 14B9:0435       _test
+ 14B9:0445       _n_diff
+ 14B9:0447       _Logflag
+ 14B9:0449       _token
+ 14B9:0499       _class
+ 14B9:0AE9       _Sd_flag
+ 14B9:0AEB       _fpout
+ 14B9:0AEF       _casnum
+ 14B9:0AF3       _logfile
+ 14B9:0AF7       _Iqr_flag
+ 14B9:0AF9       _option
+ 14B9:0AFB       _logflag
+ 14B9:0AFD       _buffer
+ 14B9:0CFD       _sd_diff
+ 14B9:0D05       _Sem_flag
+ 14B9:0D07       _mantissa
+ 14B9:0D17       _tempdata
+ 14B9:0D1B       _X_length
+ 14B9:0D1D       _Inter_t
+ 14B9:0D21       _filename
+ 14B9:0DA2       _tok_type
+ 14B9:0DA3       _testname
+ 14B9:0DA7       _Mean_flag
+ 14B9:0DA9       _var_diff
+ 14B9:0DB1       _columns
+ 14B9:0DB3       _zeroflag
+ 14B9:0DC3       _x_length
+ 14B9:0DC5       _y_length
+ 14B9:0DC7       _maxlegend
+ 14B9:0DC9       _symbols
+ 14B9:0DCB       _temprank
+ 14B9:0DCF       _errstring
+ 14B9:0DF7       _rowlabel
+ 14B9:0E1F       _mean_diff
+ 14B9:0E27       _tracefile
+ 14B9:0E2B       _x_origin
+ 14B9:0E2D       _Inter_bar
+ 14B9:0E31       _y_origin
+ 14B9:0E33       _Datasymbol
+ 14B9:0E35       _exponent
+ 14B9:0E45       _evaltext
+ 14B9:0E49       _valid_data
+ 14B9:0E4D       _evalstring
+ 14B9:0E51       _testunit
+ 14B9:0E55       _Symbol_size
+ 14B9:0E57       _Median_flag
+ 14B9:0E59       _teststring
+ 14B9:0E62       _textstring
+ 14B9:0E66       _medianrank
+ 14B9:0E6A       _nooftests
+ 14B9:0E6C       _new_tests
+ 14B9:0E6E       _first_title
+ 14B9:0EBF       _Y_axis_title
+ 14B9:0F10       _class_unit
+ 14B9:0F18       _extra_text
+ 14B9:0F1C       _startchars
+ 14B9:0F6C       _column_width
+ 14B9:0F6E       _second_title
+ 14B9:0FBF       _evalpointer
+ 14B9:0FC3       _y_axis_title
+ 14B9:1014       _bottomlines
+ 14B9:1016       _headerlines
+ 14B9:1018       _central_value
+ 14B9:1020       _rankpointer
+ 14B9:1024       _symbolcolor
+ 14B9:1036       _lower_limit
+ 14B9:103A       _textpointer
+ 14B9:103E       _defaultstring
+ 14B9:1042       _maxlegendsize
+ 14B9:1044       _maximum_value
+ 14B9:104C       _minimum_value
+ 14B9:1054       _operator_type
+ 14B9:1055       _symbol_legend
+ 14B9:1059       _protocol_code
+ 14B9:105B       _target_level
+ 14B9:105D       _upper_limit
+ 14B9:1061       _startup_drive
+ 14B9:1063       _symbol_in_use
+ 14B9:106C       _classcounter
+ 14B9:16BC       _error_status
+ 14B9:16BE       _current_level
+ 14B9:16C0       _scale_factor
+ 14B9:16C8       _outcome_test
+ 14B9:16CA       _Skipnegatives
+ 14B9:16CC       _completestring
+ 14B9:16D6       _casnumpointer
+ 14B9:16DA       _tests_per_range
+ 14B9:16EA       _calibratorstring
+ 1BB4:0000       emws_limitSP
+ 1BB4:00C0       emws_initialSP
+ 1BB4:00CC       emws_saveVector
+ 1BB4:00D0       emws_nmiVector
+ 1BB4:00D4       emws_status
+ 1BB4:00D6       emws_control
+ 1BB4:00D8       emws_TOS
+ 1BB4:00DA       emws_adjust
+ 1BB4:00DC       emws_fixSeg
+ 1BB4:00DE       emws_BPsafe
+ 1BB4:00E0       emws_stamp
+ 1BB4:00E4       emws_version
+ 1BB4:00E6       emuTop@
+
+Undefined symbol '__setargv' in module C0H
+Undefined symbol '__setenvp' in module C0H
+Undefined symbol '_exit' in module C0H
+Undefined symbol '_setdisk' in module T5.C
+Undefined symbol '_printf' in module T5.C
+Undefined symbol '_calloc' in module $T5START.C
+Undefined symbol '_farcalloc' in module $T5START.C
+Undefined symbol '_fclose' in module $T5START.C
+Undefined symbol '_fprintf' in module $T5START.C
+Undefined symbol '_strcpy' in module $T5START.C
+Undefined symbol '_sprintf' in module $T5START.C
+Undefined symbol '_coreleft' in module $T5START.C
+Undefined symbol '_putch' in module $T5START.C
+Undefined symbol '_gotoxy' in module $T5START.C
+Undefined symbol '_wherey' in module $T5START.C
+Undefined symbol '_wherex' in module $T5START.C
+Undefined symbol '_clrscr' in module $T5START.C
+Undefined symbol 'FIWRQQ' in module $T5OPT.C
+Undefined symbol 'FIDRQQ' in module $T5OPT.C
+Undefined symbol 'FIERQQ' in module $T5OPT.C
+Undefined symbol '_atol' in module $T5OPT.C
+Undefined symbol '_gets' in module $T5OPT.C
+Undefined symbol '_atof' in module $T5OPT.C
+Undefined symbol 'FTOL@' in module $T5OPT.C
+Undefined symbol '_getenv' in module $T5OPT.C
+Undefined symbol '_getdisk' in module $T5OPT.C
+Undefined symbol '_stricmp' in module $T5OPT.C
+Undefined symbol '_strlen' in module $T5OPT.C
+Undefined symbol '_fopen' in module $T5FILE.C
+Undefined symbol '_fnsplit' in module $T5FILE.C
+Undefined symbol '_strncpy' in module $T5FILE.C
+Undefined symbol '_fread' in module $T5FILE.C
+Undefined symbol '_fscanf' in module $T5FILE.C
+Undefined symbol '_system' in module $T5FILE.C
+Undefined symbol '_fgetc' in module $T5FILE.C
+Undefined symbol '_getw' in module $T5FILE.C
+Undefined symbol '__ctype' in module $T5FILE.C
+Undefined symbol '_fnmerge' in module $T5FILE.C
+Undefined symbol '_ungetc' in module $T5FILE.C
+Undefined symbol '_getch' in module $T5SELEC.C
+Undefined symbol '_clreol' in module $T5SELEC.C
+Undefined symbol '_puts' in module $T5SELEC.C
+Undefined symbol '_strncmp' in module $T5SELEC.C
+Undefined symbol '_toupper' in module $T5SELEC.C
+Undefined symbol '_log' in module $TT.C
+Undefined symbol '_spawnlp' in module $TT.C
+Undefined symbol '_fputc' in module $TT.C
+Undefined symbol '_exp' in module $TT.C
+Undefined symbol '_sqrt' in module $TT.C
+Undefined symbol '_strtok' in module $PARSE.C
+Undefined symbol '_strcat' in module $PARSE.C
+Undefined symbol '__fputc' in module $T5VARIA.C
+Undefined symbol '__streams' in module $T5VARIA.C
+Undefined symbol '_ceil' in module $T5VARIA.C
+Undefined symbol '_strcmp' in module $T5VARIA.C
+Undefined symbol '_strcspn' in module $T5VARIA.C
+Undefined symbol '_fputs' in module $PIC.C
+Undefined symbol '_getsymbol' in module $PIC.C
+Undefined symbol 'LXMUL@' in module $PIC.C
+Undefined symbol 'SCOPY@' in module $PIC.C
+Undefined symbol 'LDIV@' in module $PIC.C
+Undefined symbol '_pow10' in module $PIC.C
+Undefined symbol 'LMOD@' in module $PIC.C
+Program entry point at 0000:0000
+

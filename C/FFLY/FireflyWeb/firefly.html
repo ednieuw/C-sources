@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Firefly</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: full-bleed black canvas; a title-bar-topped control panel docked at the bottom, a round button to show/hide it.
+   Look: the original's own world - pure black, firefly green (0,255,0) with its dark afterglow (0,48,0), and the
+   Windows 3.x navy title bar carrying the original window title. One dark look by choice. */
+:root {
+  --bg: #000000;
+  --panel: #0a110c;
+  --panel-line: #223528;
+  --fg: #dcebdd;
+  --muted: #8da593;
+  --firefly: #00ff00;
+  --firefly-ink: #021a02;
+  --afterglow: #003000;
+  --titlebar: #000080;
+  --titlebar-fg: #ffffff;
+  --focus: #8dff8d;
+  --font-ui: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Courier New", monospace;
+  color-scheme: dark;
+}
+html, body { height: 100%; margin: 0; overflow: hidden; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.35 var(--font-ui);
+  -webkit-user-select: none; user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#stage { position: fixed; inset: 0; width: 100%; height: 100%; display: block; background: var(--bg); touch-action: manipulation; }
+
+.fab {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  right: max(12px, env(safe-area-inset-right, 0px));
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid var(--panel-line);
+  background: rgba(10, 17, 12, 0.82);
+  color: var(--firefly);
+  display: grid; place-items: center; padding: 0; cursor: pointer;
+  touch-action: manipulation;
+  z-index: 3;
+}
+.fab svg { width: 24px; height: 24px; }
+.fab[aria-expanded="true"] { background: var(--firefly); color: var(--firefly-ink); border-color: var(--firefly); }
+
+.dock {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 2;
+  display: flex; justify-content: center;
+  padding-top: 0;
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  pointer-events: none;
+}
+.panel {
+  pointer-events: auto;
+  width: min(100%, 780px); min-width: 0;
+  max-height: min(62vh, 560px);
+  display: flex; flex-direction: column;
+  background: rgba(10, 17, 12, 0.93);
+  border: 1px solid var(--panel-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.titlebar {
+  flex: none;
+  background: var(--titlebar); color: var(--titlebar-fg);
+  font: 600 13px/1 var(--font-mono);
+  padding: 9px 12px;
+  white-space: pre; overflow: hidden; text-overflow: ellipsis;
+}
+.body { overflow-y: auto; padding: 14px 14px 12px; min-height: 0; -webkit-overflow-scrolling: touch; }
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px 22px; }
+.ctl { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 12px; row-gap: 2px; min-width: 0; }
+.ctl .lbl { font-weight: 600; }
+.ctl .hint { grid-column: 1; font-size: 12.5px; color: var(--muted); }
+.ctl .ctl-input { grid-column: 2; grid-row: 1 / span 2; display: flex; align-items: center; gap: 6px; }
+.ctl.wide .ctl-input { min-width: 0; flex: 1; }
+.val { min-width: 3.6ch; text-align: center; font: 600 16px/1 var(--font-mono); font-variant-numeric: tabular-nums; }
+button { font: inherit; color: inherit; }
+.step, .btn, .switch { cursor: pointer; touch-action: manipulation; -webkit-user-select: none; user-select: none; }
+.step {
+  width: 44px; height: 44px; border-radius: 8px;
+  border: 1px solid var(--panel-line); background: #101b13; color: var(--fg);
+  font: 600 22px/1 var(--font-mono); padding: 0;
+}
+.step:active { background: var(--firefly); color: var(--firefly-ink); border-color: var(--firefly); }
+.switch {
+  width: 56px; height: 32px; border-radius: 16px; padding: 3px;
+  border: 1px solid var(--panel-line); background: #101b13; position: relative;
+}
+.switch::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--muted); transition: transform .12s ease, background .12s ease;
+}
+.switch[aria-checked="true"] { background: var(--afterglow); border-color: var(--firefly); }
+.switch[aria-checked="true"]::after { transform: translateX(24px); background: var(--firefly); }
+.range { width: 100%; min-width: 130px; height: 44px; accent-color: var(--firefly); background: transparent; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.btn {
+  min-height: 44px; padding: 0 18px; border-radius: 8px; font-weight: 600;
+  border: 1px solid var(--panel-line); background: #101b13; color: var(--fg);
+}
+.btn.primary { background: var(--firefly); color: var(--firefly-ink); border-color: var(--firefly); }
+.btn:active { filter: brightness(1.25); }
+.note { margin: 14px 0 0; font-size: 12.5px; color: var(--muted); }
+.note kbd { font: 600 12px var(--font-mono); color: var(--fg); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.panel[hidden], .dock[hidden] { display: none !important; }
+@media (max-width: 520px) { .controls { grid-template-columns: 1fr; } .body { padding: 12px; } }
+@media (prefers-reduced-motion: reduce) { .switch::after { transition: none; } }
+</style>
+</head>
+<body>
+
+<canvas id="stage" role="img" aria-label="A grid of fireflies flashing in waves"></canvas>
+
+<button class="fab" id="panelToggle" type="button" aria-controls="panel" aria-expanded="true" aria-label="Show or hide controls">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+    <path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>
+  </svg>
+</button>
+
+<div class="dock" id="dock">
+  <section class="panel" id="panel" aria-label="Controls">
+    <div class="titlebar" id="caption">Cellsaround 4 Energie 110% Thresholddiv 4 Glow FIREFLY</div>
+    <div class="body">
+      <div class="controls">
+        <div class="ctl" data-stepper="cellsAround">
+          <span class="lbl">Cells around</span>
+          <span class="hint">How far a flash reaches</span>
+          <span class="ctl-input">
+            <button class="step" type="button" data-dir="-1" aria-label="Fewer cells around">&minus;</button>
+            <output class="val" id="v-cellsAround">4</output>
+            <button class="step" type="button" data-dir="1" aria-label="More cells around">+</button>
+          </span>
+        </div>
+        <div class="ctl" data-stepper="energie">
+          <span class="lbl">Energie</span>
+          <span class="hint">How fast they charge. 110% is the original</span>
+          <span class="ctl-input">
+            <button class="step" type="button" data-dir="-1" aria-label="Less energie">&minus;</button>
+            <output class="val" id="v-energie">110%</output>
+            <button class="step" type="button" data-dir="1" aria-label="More energie">+</button>
+          </span>
+        </div>
+        <div class="ctl" data-stepper="thresholdDiv">
+          <span class="lbl">Threshold divisor</span>
+          <span class="hint">Higher is gentler and calmer. Try 40</span>
+          <span class="ctl-input">
+            <button class="step" type="button" data-dir="-1" aria-label="Lower threshold divisor">&minus;</button>
+            <output class="val" id="v-thresholdDiv">4</output>
+            <button class="step" type="button" data-dir="1" aria-label="Higher threshold divisor">+</button>
+          </span>
+        </div>
+        <div class="ctl">
+          <span class="lbl" id="l-glow">Glow</span>
+          <span class="hint">Dim afterglow after each flash</span>
+          <span class="ctl-input"><button class="switch" id="sw-glow" type="button" role="switch" aria-checked="true" aria-labelledby="l-glow"></button></span>
+        </div>
+        <div class="ctl">
+          <span class="lbl" id="l-sprites">Firefly bitmaps</span>
+          <span class="hint">The original 16&times;16 pictures</span>
+          <span class="ctl-input"><button class="switch" id="sw-sprites" type="button" role="switch" aria-checked="false" aria-labelledby="l-sprites"></button></span>
+        </div>
+        <div class="ctl wide">
+          <span class="lbl" id="l-speed">Speed</span>
+          <span class="hint" id="v-speed">20 steps per second</span>
+          <span class="ctl-input"><input class="range" id="speed" type="range" min="1" max="60" step="1" value="20" aria-labelledby="l-speed"></span>
+        </div>
+        <div class="ctl" data-stepper="columns" data-step="10">
+          <span class="lbl">Columns</span>
+          <span class="hint">Grid width. Changing it restarts</span>
+          <span class="ctl-input">
+            <button class="step" type="button" data-dir="-1" aria-label="Fewer columns">&minus;</button>
+            <output class="val" id="v-columns">120</output>
+            <button class="step" type="button" data-dir="1" aria-label="More columns">+</button>
+          </span>
+        </div>
+        <div class="ctl" data-stepper="rows" data-step="10">
+          <span class="lbl">Rows</span>
+          <span class="hint">Grid height</span>
+          <span class="ctl-input">
+            <button class="step" type="button" data-dir="-1" aria-label="Fewer rows">&minus;</button>
+            <output class="val" id="v-rows">100</output>
+            <button class="step" type="button" data-dir="1" aria-label="More rows">+</button>
+          </span>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn primary" id="btn-pause" type="button">Pause</button>
+        <button class="btn" id="btn-restart" type="button">Restart</button>
+        <button class="btn" id="btn-reset" type="button">Reset settings</button>
+      </div>
+      <p class="note">Tap the picture to hide this panel. With a keyboard: <kbd>c</kbd>/<kbd>C</kbd> cells, <kbd>e</kbd>/<kbd>E</kbd> energie, <kbd>t</kbd>/<kbd>T</kbd> threshold, <kbd>r</kbd> reset, <kbd>g</kbd>/<kbd>G</kbd> glow. The picture flashes quickly. Lower the speed if that is uncomfortable.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+"use strict";
+/* Fireflies - web revival of FIREFLY (Ed Nieuwenhuys, 1993).
+   Engine = port of CalcFlash() and the cell state machine of DrawFlies() from FIREFLY.C. */
+
+/* ---------- parameters (defaults, limits, original keys) ---------- */
+const Params = (() => {
+  const DEFAULTS = { columns: 120, rows: 100, cellsAround: 4, energie: 110, thresholdDiv: 4, glow: true };
+  const RANGE = { cellsAround: [1, 20], energie: [1, 999], thresholdDiv: [1, 500], dim: [4, 300] };
+  const MAX_CELLS = 40000;
+  const clamp = (v, [lo, hi]) => Math.min(Math.max(Math.round(v), lo), hi);
+
+  function fitGrid(columns, rows) {
+    let c = clamp(columns, RANGE.dim), r = clamp(rows, RANGE.dim);
+    if (c * r > MAX_CELLS) {
+      const scale = Math.sqrt(MAX_CELLS / (c * r));
+      c = clamp(Math.trunc(c * scale), RANGE.dim);
+      r = clamp(Math.trunc(r * scale), RANGE.dim);
+    }
+    return [c, r];
+  }
+  function normalized(p) {
+    const q = { ...p };
+    q.cellsAround = clamp(q.cellsAround, RANGE.cellsAround);
+    q.energie = clamp(q.energie, RANGE.energie);
+    q.thresholdDiv = clamp(q.thresholdDiv, RANGE.thresholdDiv);
+    [q.columns, q.rows] = fitGrid(q.columns, q.rows);
+    q.glow = !!q.glow;
+    return q;
+  }
+  /* c/C cellaround -/+, e/E Energie -/+, t/T thresholddiv -/+, r/R reset those three, g/G glow off/on. */
+  function handleKey(p, key) {
+    const q = { ...p };
+    switch (key) {
+      case "c": q.cellsAround -= 1; break;
+      case "C": q.cellsAround += 1; break;
+      case "e": q.energie -= 1; break;
+      case "E": q.energie += 1; break;
+      case "t": q.thresholdDiv -= 1; break;
+      case "T": q.thresholdDiv += 1; break;
+      case "r": case "R":
+        q.energie = DEFAULTS.energie; q.thresholdDiv = DEFAULTS.thresholdDiv; q.cellsAround = DEFAULTS.cellsAround; break;
+      case "g": q.glow = false; break;
+      case "G": q.glow = true; break;
+      default: return null;
+    }
+    return normalized(q);
+  }
+  /* The original title: "Cellsaround %d Energie %d%% Thresholddiv %d %s FIREFLY" */
+  function title(p) {
+    return `Cellsaround ${p.cellsAround} Energie ${p.energie}% Thresholddiv ${p.thresholdDiv} ${p.glow ? "Glow" : ""} FIREFLY`;
+  }
+  return { DEFAULTS, RANGE, MAX_CELLS, normalized, fitGrid, handleKey, title };
+})();
+
+/* ---------- seedable generator (only for repeatable test runs) ---------- */
+class SplitMix64 {
+  constructor(seed) { this.state = BigInt.asUintN(64, BigInt(seed)); }
+  next() {
+    this.state = BigInt.asUintN(64, this.state + 0x9E3779B97F4A7C15n);
+    let z = this.state;
+    z = BigInt.asUintN(64, (z ^ (z >> 30n)) * 0xBF58476D1CE4E5B9n);
+    z = BigInt.asUintN(64, (z ^ (z >> 27n)) * 0x94D049BB133111EBn);
+    return z ^ (z >> 31n);
+  }
+}
+
+/* ---------- simulation ---------- */
+const THRESHOLD = 1000;     /* a cell fires when its energy reaches this */
+const BASE_CHARGE = 10;     /* energy gained per tick at Energie 110 (the literal "+= 10") */
+const f32 = Math.fround;
+
+/* Energy a neighbour at squared distance d gets from a firing cell:
+   (int)(0.5 + 0.5*(threshold*(maxdistance/d/maxdistance))) / thresholddiv, float math like the original. */
+function gain(d, cellsAround, thresholdDiv) {
+  const maxD = 2 * cellsAround * cellsAround;
+  const ratio = f32(f32(f32(maxD) / f32(d)) / f32(maxD));
+  const scaled = f32(f32(THRESHOLD) * ratio);
+  return Math.trunc(Math.trunc(0.5 + 0.5 * scaled) / thresholdDiv);
+}
+
+function buildKernel(cellsAround, thresholdDiv) {
+  const dx = [], dy = [], g = [];
+  for (let ox = -cellsAround; ox <= cellsAround; ox++) {
+    for (let oy = -cellsAround; oy <= cellsAround; oy++) {
+      if (ox === 0 && oy === 0) continue;
+      const v = gain(ox * ox + oy * oy, cellsAround, thresholdDiv);
+      if (v > 0) { dx.push(ox); dy.push(oy); g.push(v); }
+    }
+  }
+  return { cellsAround, thresholdDiv, dx: Int32Array.from(dx), dy: Int32Array.from(dy), gain: Float32Array.from(g) };
+}
+
+class Engine {
+  constructor(params = Params.DEFAULTS) {
+    this.parameters = Params.normalized(params);
+    this.allocate();
+    this.kernel = buildKernel(this.parameters.cellsAround, this.parameters.thresholdDiv);
+  }
+  allocate() {
+    this.columns = this.parameters.columns;
+    this.rows = this.parameters.rows;
+    const n = this.columns * this.rows;
+    this.energy = new Float32Array(n);   /* energie[]  */
+    this.pending = new Float32Array(n);  /* genergie[] */
+    this.flash = new Uint8Array(n);      /* 0 nothing, 1 glow pending, 2 fired this tick */
+    this.level = new Uint8Array(n);      /* painted: 0 dark, 1 dim, 2 bright */
+  }
+  get charge() { return f32(f32(BASE_CHARGE * this.parameters.energie) / 110); }
+
+  /* Init(): random energy 0..threshold-1 per cell; columns outer, rows inner like the original. */
+  randomize(nextInt = () => Math.floor(Math.random() * THRESHOLD)) {
+    for (let n = 0; n < this.columns; n++)
+      for (let m = 0; m < this.rows; m++) this.energy[n + this.columns * m] = nextInt();
+    this.pending.fill(0); this.flash.fill(0); this.level.fill(0);
+  }
+  setParameters(next) {
+    const p = Params.normalized(next);
+    const gridChanged = p.columns !== this.columns || p.rows !== this.rows;
+    this.parameters = p;
+    if (gridChanged) { this.allocate(); this.randomize(); }
+    if (this.kernel.cellsAround !== p.cellsAround || this.kernel.thresholdDiv !== p.thresholdDiv)
+      this.kernel = buildKernel(p.cellsAround, p.thresholdDiv);
+  }
+  step() { this.calcFlash(); this.advanceDisplay(); }
+
+  calcFlash() {
+    const nx = this.columns, ny = this.rows, e = this.energy, g = this.pending, f = this.flash;
+    const { dx, dy, gain: gains } = this.kernel, taps = gains.length, charge = this.charge;
+    for (let n = 0; n < nx; n++) {
+      for (let m = 0; m < ny; m++) {
+        const u = n + nx * m;
+        if (e[u] >= THRESHOLD) {
+          for (let t = 0; t < taps; t++) {
+            const i = n + dx[t], j = m + dy[t];
+            if (i < 0 || i >= nx || j < 0 || j >= ny) continue;
+            g[i + nx * j] += gains[t];
+          }
+          f[u] = 2;
+        } else {
+          g[u] += charge;
+        }
+      }
+    }
+    for (let u = 0; u < nx * ny; u++) {
+      e[u] += g[u];
+      g[u] = 0;
+      if (f[u] === 2) e[u] = 0;
+    }
+  }
+  advanceDisplay() {
+    const after = this.parameters.glow ? 1 : 0, f = this.flash, level = this.level;
+    for (let u = 0; u < f.length; u++) {
+      if (f[u] === 2) { level[u] = 2; f[u] = after; }
+      else if (f[u] === 1) { level[u] = 1; f[u] = 0; }
+      else level[u] = 0;
+    }
+  }
+}
+window.Firefly = { Params, Engine, SplitMix64, gain };
+
+/* ---------- the original 16x16 bitmaps (FIREFLY.BMP and FIREFLY1.BMP) ---------- */
+const PALETTE = { ".": [0, 0, 0], w: [192, 192, 192], g: [128, 128, 128], b: [0, 0, 255], d: [0, 191, 0], G: [0, 255, 0] };
+const SPRITE_LIT = [
+  "................", "......w...w.....", "......w..w......", "ggggg.bddb......",
+  ".gggggbddbgggggg", "..ggggddddgggggg", ".....GGGGGG..gg.", "....GGGGGGGw....",
+  "...wGGGGGGGGw...", "..w..GGGGGG.w...", ".....w...w......", "....w.....w.....",
+  "...w......w.....", "................", "................", "................"];
+const SPRITE_DIM = [
+  "................", "......w...w.....", "......w..w......", "ggggg.bggb......",
+  ".gggggbggbgggggg", "..gggggggggggggg", ".....dddddd..gg.", "....dddddddw....",
+  "...wddddddddw...", "..w..dddddd.w...", ".....w...w......", "....w.....w.....",
+  "...w......w.....", "................", "................", "................"];
+function spriteCanvas(rows) {
+  const c = document.createElement("canvas");
+  c.width = c.height = 16;
+  const ctx = c.getContext("2d");
+  const img = ctx.createImageData(16, 16);
+  rows.forEach((row, y) => [...row].forEach((ch, x) => {
+    const [r, g, b] = PALETTE[ch], o = (y * 16 + x) * 4;
+    img.data[o] = r; img.data[o + 1] = g; img.data[o + 2] = b; img.data[o + 3] = 255;
+  }));
+  ctx.putImageData(img, 0, 0);
+  return c;
+}
+
+/* ---------- app ---------- */
+const $ = (id) => document.getElementById(id);
+const canvas = $("stage"), ctx = canvas.getContext("2d", { alpha: false });
+const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const state = { speed: reduceMotion ? 8 : 20, sprites: false, paused: false, panelOpen: true };
+const engine = new Engine();
+engine.randomize();
+const sprites = { lit: spriteCanvas(SPRITE_LIT), dim: spriteCanvas(SPRITE_DIM) };
+let dirty = true, dpr = 1;
+
+function resize() {
+  dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const w = Math.max(1, Math.round(canvas.clientWidth * dpr)), h = Math.max(1, Math.round(canvas.clientHeight * dpr));
+  if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+  dirty = true;
+}
+
+function draw() {
+  const W = canvas.width, H = canvas.height, cols = engine.columns, rows = engine.rows, level = engine.level;
+  ctx.fillStyle = "#000";
+  ctx.fillRect(0, 0, W, H);
+  const cw = W / cols, ch = H / rows;
+  if (state.sprites) {
+    ctx.imageSmoothingEnabled = cw < 16 || ch < 16;   /* crisp pixels when enlarging, smooth when shrinking */
+    ctx.imageSmoothingQuality = "high";
+    for (let r = 0; r < rows; r++)
+      for (let c = 0; c < cols; c++) {
+        const v = level[c + cols * r];
+        if (v) ctx.drawImage(v === 2 ? sprites.lit : sprites.dim, c * cw, r * ch, cw, ch);
+      }
+    return;
+  }
+  /* squares; the original's black pen left a thin black grid line around every cell */
+  const gap = Math.min(dpr, Math.min(cw, ch) * 0.15);
+  for (const [want, color] of [[1, "#003000"], [2, "#00ff00"]]) {
+    ctx.fillStyle = color;
+    for (let r = 0; r < rows; r++)
+      for (let c = 0; c < cols; c++)
+        if (level[c + cols * r] === want) ctx.fillRect(c * cw + gap / 2, r * ch + gap / 2, cw - gap, ch - gap);
+  }
+}
+
+/* fixed-rate tick loop (the original ran as fast as the CPU allowed) */
+let last = performance.now(), acc = 0;
+function frame(now) {
+  const dt = Math.min(now - last, 250);
+  last = now;
+  if (!state.paused) {
+    acc += dt;
+    const interval = 1000 / state.speed;
+    let steps = 0;
+    while (acc >= interval && steps < 4) { engine.step(); acc -= interval; steps++; }
+    if (acc > interval) acc = 0;
+    if (steps) dirty = true;
+  }
+  if (dirty) { draw(); dirty = false; }
+  requestAnimationFrame(frame);
+}
+
+/* ---------- controls ---------- */
+function setParams(next) {
+  const p = Params.normalized(next), cur = engine.parameters;
+  if (JSON.stringify(p) === JSON.stringify(cur)) { updateUI(); return; }
+  engine.setParameters(p);
+  dirty = true;
+  updateUI();
+}
+function updateUI() {
+  const p = engine.parameters;
+  $("caption").textContent = Params.title(p);
+  $("v-cellsAround").textContent = p.cellsAround;
+  $("v-energie").textContent = p.energie + "%";
+  $("v-thresholdDiv").textContent = p.thresholdDiv;
+  $("v-columns").textContent = p.columns;
+  $("v-rows").textContent = p.rows;
+  $("sw-glow").setAttribute("aria-checked", String(p.glow));
+  $("sw-sprites").setAttribute("aria-checked", String(state.sprites));
+  $("v-speed").textContent = state.speed + " steps per second";
+  $("speed").value = state.speed;
+  $("btn-pause").textContent = state.paused ? "Resume" : "Pause";
+}
+
+/* + / - buttons: tap once, hold to repeat */
+document.querySelectorAll("[data-stepper]").forEach((row) => {
+  const key = row.dataset.stepper, step = Number(row.dataset.step || 1);
+  row.querySelectorAll(".step").forEach((btn) => {
+    const dir = Number(btn.dataset.dir);
+    let delay = null, repeat = null;
+    const bump = () => setParams({ ...engine.parameters, [key]: engine.parameters[key] + dir * step });
+    const stop = () => { clearTimeout(delay); clearInterval(repeat); delay = repeat = null; };
+    btn.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      bump();
+      delay = setTimeout(() => { repeat = setInterval(bump, 90); }, 450);
+    });
+    ["pointerup", "pointercancel", "pointerleave"].forEach((t) => btn.addEventListener(t, stop));
+    btn.addEventListener("click", (e) => { if (e.detail === 0) bump(); });   /* keyboard activation */
+  });
+});
+$("sw-glow").addEventListener("click", () => setParams({ ...engine.parameters, glow: !engine.parameters.glow }));
+$("sw-sprites").addEventListener("click", () => { state.sprites = !state.sprites; dirty = true; updateUI(); });
+$("speed").addEventListener("input", (e) => { state.speed = Number(e.target.value); updateUI(); });
+$("btn-pause").addEventListener("click", () => { state.paused = !state.paused; updateUI(); });
+$("btn-restart").addEventListener("click", () => { engine.randomize(); dirty = true; });
+$("btn-reset").addEventListener("click", () => setParams({ ...engine.parameters, ...Params.handleKey(engine.parameters, "r") }));
+
+function setPanel(open) {
+  state.panelOpen = open;
+  $("dock").hidden = !open;
+  $("panelToggle").setAttribute("aria-expanded", String(open));
+}
+$("panelToggle").addEventListener("click", () => setPanel(!state.panelOpen));
+canvas.addEventListener("click", () => setPanel(!state.panelOpen));
+
+window.addEventListener("keydown", (e) => {
+  if (e.ctrlKey || e.metaKey || e.altKey || e.key.length !== 1) return;
+  const next = Params.handleKey(engine.parameters, e.key);
+  if (next) { setParams(next); }
+});
+
+new ResizeObserver(resize).observe(canvas);
+window.addEventListener("resize", resize);
+resize();
+updateUI();
+requestAnimationFrame(frame);
+</script>
+
+</body>
+</html>

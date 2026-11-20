@@ -238,7 +238,7 @@ final class FireflyEngineTests: XCTestCase {
 
     func testKeysNeverGoBelowOne() {
         var p = FireflyParameters()
-        for _ in 0..<50 {
+        for _ in 0..<200 {   // Energie starts at 110, so more presses than that
             p.handleKey("c"); p.handleKey("e"); p.handleKey("t")
         }
         XCTAssertEqual(p.cellsAround, 1)
